@@ -1,5 +1,5 @@
 ---
-title: Data Science and COVID-19- Current and Future Trends
+title: "Data Science and COVID-19: Current and Future Trends"
 author:
   - name: Rex Douglass
     email: rexdouglass@gmail.com
@@ -37,7 +37,9 @@ Introduction
 
 [@CovidatlasLi2020]
 
-[@MicrosoftBingCOVID19Data2020]
+[@chiqunzhangBingCOVID19Data2020]
+
+[@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
 
 ```{r}
 ```
