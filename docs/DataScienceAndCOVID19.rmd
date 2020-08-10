@@ -1,0 +1,43 @@
+---
+title: Data Science and COVID-19- Current and Future Trends
+author:
+  - name: Rex Douglass
+    email: rexdouglass@gmail.com
+    affiliation: University of California, San Diego
+  - name: Thomas Leo Scherer
+    email: tlscherer@ucsd.edu
+    affiliation: University of California, San Diego
+address:
+  - code: University of California San Diego
+    address: University of California, San Diego, La Jolla,CA, 92093
+abstract: |
+  We review existing temporal taggers, and compare their abilities in recognizing and normalizing temporal expressions in text coming from various languages and sources. HeidelTime, SUTime, and Dateparser are the chosen parsers. They will be reproduced, and evaluated on a set of corpora used in previous temporal recognizing and extraction challenges.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
+  
+author_summary: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
+
+output: 
+  html_notebook: default
+  rticles::plos_article: default
+bibliography: cpas_covid_19.bib
+
+# Some paper adjustments
+---
+
+2000/2500 words
+
+
+```{r}
+#
+#csl: plos.csl
+#fontsize: 12pt # Fontsize
+#geometry: "left=4cm, right=3cm, top=2.5cm, bottom=2.5cm" 
+```
+
+Introduction
+
+
+```{r}
+```
+
