@@ -10,10 +10,8 @@ author:
 address:
   - code: University of California San Diego
     address: University of California, San Diego, La Jolla,CA, 92093
-abstract: |
-  We review existing temporal taggers, and compare their abilities in recognizing and normalizing temporal expressions in text coming from various languages and sources. HeidelTime, SUTime, and Dateparser are the chosen parsers. They will be reproduced, and evaluated on a set of corpora used in previous temporal recognizing and extraction challenges.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
-  
+abstract: Abstract here
+
 author_summary: |
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
 
@@ -37,6 +35,9 @@ bibliography: cpas_covid_19.bib
 
 Introduction
 
+[@CovidatlasLi2020]
+
+[@MicrosoftBingCOVID19Data2020]
 
 ```{r}
 ```
