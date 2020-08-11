@@ -33,13 +33,22 @@ bibliography: cpas_covid_19.bib
 #geometry: "left=4cm, right=3cm, top=2.5cm, bottom=2.5cm" 
 ```
 
-Introduction
+# Introduction
+
+The SARS-COV-2 global pandemic revealed that government institutions lack the necessary capability to address all of the scientific, safety, and public health needs of their constituents. Commercial, academic, and civil society efforts have stepped forward to fill this gap but often haltingly, 
+
 
 [@CovidatlasLi2020]
 
 [@chiqunzhangBingCOVID19Data2020]
 
 [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
+
+Long term monitoring
+
+Model evaluation and forcasting
+
+
 
 ```{r}
 ```
