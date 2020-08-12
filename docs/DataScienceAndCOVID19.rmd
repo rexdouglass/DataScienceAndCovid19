@@ -37,6 +37,10 @@ bibliography: cpas_covid_19.bib
 
 The SARS-COV-2 global pandemic revealed that government institutions lack the necessary capability to address all of the scientific, safety, and public health needs of their constituents. Commercial, academic, and civil society efforts have stepped forward to fill this gap but often haltingly, 
 
+Aggregate covid
+
+surveys
+
 
 [@CovidatlasLi2020]
 
@@ -47,6 +51,10 @@ The SARS-COV-2 global pandemic revealed that government institutions lack the ne
 Long term monitoring
 
 Model evaluation and forcasting
+
+
+Don't be discouraged but do the reading.
+
 
 
 
