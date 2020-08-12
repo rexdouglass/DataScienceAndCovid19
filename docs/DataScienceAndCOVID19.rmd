@@ -25,14 +25,6 @@ bibliography: cpas_covid_19.bib
 
 2000/2500 words
 
-
-```{r}
-#
-#csl: plos.csl
-#fontsize: 12pt # Fontsize
-#geometry: "left=4cm, right=3cm, top=2.5cm, bottom=2.5cm" 
-```
-
 # Introduction
 
 The SARS-COV-2 global pandemic revealed that government institutions lack the necessary capability to address all of the scientific, safety, and public health needs of their constituents. Commercial, academic, and civil society efforts have stepped forward to fill this gap but often haltingly, 
@@ -41,23 +33,30 @@ Aggregate covid
 
 surveys
 
+New York Times partnered with Kaiser
+Facts on File
+CDC Flu View
+serelogical evidene
 
 [@CovidatlasLi2020]
 
-[@chiqunzhangBingCOVID19Data2020]
+### Measurement- Cases
 
-[@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
+New York Times [@albertsunNewYorkTimes2020]
 
-Long term monitoring
+Bing [@chiqunzhangBingCOVID19Data2020]
 
-Model evaluation and forcasting
+Yahoo [@ashleywolfYahooKnowledgeGraph2020]
+
+Forecast Hub [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
+
+USAfacts [@usafactsUSCoronavirusCases2020]
+
+
+
+### Model evaluation and forcasting
 
 
 Don't be discouraged but do the reading.
 
-
-
-
-```{r}
-```
-
+# References
