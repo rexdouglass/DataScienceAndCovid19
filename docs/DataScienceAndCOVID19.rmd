@@ -35,11 +35,39 @@ bibliography: cpas_covid_19.bib
 
 # Introduction
 
-The SARS-COV-2 global pandemic revealed that government institutions lack the necessary capability to address all of the scientific, safety, and public health needs of their constituents. Commercial, academic, and civil society efforts have stepped forward to fill this gap but often haltingly, 
+The SARS-COV-2 global pandemic has exposed weaknesses throughout our institutions and organizations, and the social sciences is no exception. Even today, a half a year into the deadliest crisis most of us will ever see, we are still unable to answer basic questions about how human society should respond to the pandemic. [Example?]
 
-Aggregate covid
+As we consider the shape of things to come, we must also consider political science in the post COVID-19 age. To this conversation, we offer four lessons for social science from our own failures in understanding the pandemic.
 
-surveys
+<!-- Foremost, it showed that government institutions lack the capacity to  public health needs of their constituents.  -->
+
+<!-- address all of the scientific, safety, and -->
+
+<!-- Commercial, academic, and civil society efforts have stepped forward to fill this gap but often haltingly,  -->
+
+
+# We must care about the truth
+
+<!-- Let's face it, most of our audiences aren't interested in the truth. We must write to the few that do. And if that's not enough of an incentive to care about the truth, then as a field we must develop mechanisms to hold ourselves accountable.  -->
+
+
+# Developing expertise is better than being an expert
+
+<!-- You don't need to be an epidemiologist to make epidemiological claims, but you do need to use epidemiological models. Social scientists can (and should) drive in this lane, but there are some rules to the road -->
+
+
+# Develop standing capabilities and collaborations
+
+
+
+# Open source / publication process
+<!-- Arhive getting hammered -->
+
+
+
+
+
+
 
 
 [@CovidatlasLi2020]
@@ -51,7 +79,6 @@ surveys
 Long term monitoring
 
 Model evaluation and forcasting
-
 
 Don't be discouraged but do the reading.
 
