@@ -1,5 +1,5 @@
 ---
-title: "Data Science and COVID-19: Current and Future Trends"
+title: "Data Science and COVID-19: 10 Current and Future Trends"
 author:
   - name: Rex Douglass
     email: rexdouglass@gmail.com
@@ -56,23 +56,12 @@ As we consider the shape of things to come, we must also consider political scie
 <!-- Arhive getting hammered -->
 
 
+# We do not know how many people have had COVID-19 and we will likely never know.
 
 
+# Measurements are constantly being aggregated and reaggreated by different actors, and aren't being archived systematically.
 
-New York Times partnered with Kaiser
-Facts on File
-CDC Flu View
-serelogical evidene
-
-Data science transforms information from one form into another, e.g. county PDFs into time series databases.
-
-Data science studies the institutional data generating processes, reporting varies, that variation can and often is bigger than the signal empiricists want to test in their models.
-
-Data science concerned with performance, and evaluation, e.g. forcasting and measuring performance.
-
-### Measurement- Cases
-
-Surveys
+There is no one in charge, there are no adults in the room. 
 
 Lit review of sources [@alamoCovid19OpenDataResources2020]
 
@@ -90,29 +79,83 @@ COVID Atlas li [@jzohrabCOVIDAtlasLi2020]
 
 The Covid-Tracking Project [@zachliptonCovidTrackingProject2020]
 
-### Institutional Data Generating Process
+
+# The measurements we have don't agree with one another,
 
 Sources don't agree with each other [@wangComparingIntegratingUS2020]
+
+
+# Desperately looking for other kinds of measurements but no real ground truth
+
+Surveys
+
+Early warning [@koganEarlyWarningApproach2020]
+
+# The sensors we use to estimate infections have their own complicated data generating processes which we also don't know and can't measure well.
 
 Counts a basically proxing for testing availability not prevalence [@kaashoekCOVID19PositiveCases2020a]
 
 Handling testing induced effects correctly [@kubinecRetrospectiveBayesianModel2020]
 
-### Measurement other things
 
-Early warning [@koganEarlyWarningApproach2020]
 
-Government responses "13,000 such policy announcements across more than 195 countries" [@chengCOVID19GovernmentResponse2020]
 
-### Modeling
 
-The dirty secret of COVID-19 modeling is that there just isn't that much unique information there. You can torture a panel dataset with a small number of units and a high auto-correlation between time units into telling you whatever you want, but that doesn't make it true.
+# Contrarianism complicates science
+
+# Conformity complicates science
+-Bad papers getting through
+-Rough papers getting withdrawn
+-General intolerance for uncertainty
+
+# Medical work with bad statistics
+
+# Social science with sophisticated statistics but no epidemiological model
+
+# Star hunting rather than explaining
+
+# Little evaluation, short memories, constantly changing models and forcasts.
+
+Forecast Hub [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
 
 Don't be discouraged but do the reading.
 Bayesian estimate of R_t @[#BayesianNowcastingAdjustment]
 
+
+
+
+Government responses "13,000 such policy announcements across more than 195 countries" [@chengCOVID19GovernmentResponse2020]
+
+
+
+
+
+
+
+
+Dirty secrets - private institutions produce the data, government institutions aggregate it, private institutions aggregate it again.
+
+We're almost always looking under the streetlamp.
+
+We don't have mechanisms for sorting good evidence from bad.
+
+
+New York Times partnered with Kaiser
+Facts on File
+CDC Flu View
+serelogical evidene
+
+Data science transforms information from one form into another, e.g. county PDFs into time series databases.
+
+Data science studies the institutional data generating processes, reporting varies, that variation can and often is bigger than the signal empiricists want to test in their models.
+
+Data science concerned with performance, and evaluation, e.g. forcasting and measuring performance.
+
+
+The dirty secret of COVID-19 modeling is that there just isn't that much unique information there. You can torture a panel dataset with a small number of units and a high auto-correlation between time units into telling you whatever you want, but that doesn't make it true.
+
+
 ### Model evaluation and forcasting
-Forecast Hub [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
 
 
 Don't be discouraged but do the reading.
