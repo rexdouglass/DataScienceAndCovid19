@@ -105,6 +105,9 @@ Early warning [@koganEarlyWarningApproach2020]
 Government responses "13,000 such policy announcements across more than 195 countries" [@chengCOVID19GovernmentResponse2020]
 
 ### Modeling
+
+The dirty secret of COVID-19 modeling is that there just isn't that much unique information there. You can torture a panel dataset with a small number of units and a high auto-correlation between time units into telling you whatever you want, but that doesn't make it true.
+
 Don't be discouraged but do the reading.
 Bayesian estimate of R_t @[#BayesianNowcastingAdjustment]
 
