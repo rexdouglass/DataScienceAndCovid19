@@ -59,16 +59,24 @@ As we consider the shape of things to come, we must also consider political scie
 
 
 
-
-
 New York Times partnered with Kaiser
 Facts on File
 CDC Flu View
 serelogical evidene
 
-[@CovidatlasLi2020]
+Data science transforms information from one form into another, e.g. county PDFs into time series databases.
+
+Data science studies the institutional data generating processes, reporting varies, that variation can and often is bigger than the signal empiricists want to test in their models.
+
+Data science concerned with performance, and evaluation, e.g. forcasting and measuring performance.
 
 ### Measurement- Cases
+
+Surveys
+
+Lit review of sources [@alamoCovid19OpenDataResources2020]
+
+1Point3Acres [@yangCovidNetBringData2020]
 
 New York Times [@albertsunNewYorkTimes2020]
 
@@ -82,14 +90,26 @@ COVID Atlas li [@jzohrabCOVIDAtlasLi2020]
 
 The Covid-Tracking Project [@zachliptonCovidTrackingProject2020]
 
-Disagreement across sources [@wangComparingIntegratingUS2020]
+### Institutional Data Generating Process
 
+Sources don't agree with each other [@wangComparingIntegratingUS2020]
+
+Counts a basically proxing for testing availability not prevalence [@kaashoekCOVID19PositiveCases2020a]
+
+Handling testing induced effects correctly [@kubinecRetrospectiveBayesianModel2020]
+
+### Measurement other things
+
+Early warning [@koganEarlyWarningApproach2020]
+
+Government responses "13,000 such policy announcements across more than 195 countries" [@chengCOVID19GovernmentResponse2020]
+
+### Modeling
 Don't be discouraged but do the reading.
-
-Forecast Hub [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
-
+Bayesian estimate of R_t @[#BayesianNowcastingAdjustment]
 
 ### Model evaluation and forcasting
+Forecast Hub [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
 
 
 Don't be discouraged but do the reading.
