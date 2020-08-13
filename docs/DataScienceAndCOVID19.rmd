@@ -76,11 +76,17 @@ Bing [@chiqunzhangBingCOVID19Data2020]
 
 Yahoo [@ashleywolfYahooKnowledgeGraph2020]
 
+USAfacts [@usafactsUSCoronavirusCases2020]
+
+COVID Atlas li [@jzohrabCOVIDAtlasLi2020]
+
+The Covid-Tracking Project [@zachliptonCovidTrackingProject2020]
+
+Disagreement across sources [@wangComparingIntegratingUS2020]
+
 Don't be discouraged but do the reading.
 
 Forecast Hub [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
-
-USAfacts [@usafactsUSCoronavirusCases2020]
 
 
 ### Model evaluation and forcasting
