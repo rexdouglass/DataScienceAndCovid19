@@ -56,10 +56,14 @@ As we consider the shape of things to come, we must also consider political scie
 <!-- Arhive getting hammered -->
 
 
-# We do not know how many people have had COVID-19 and we will likely never know.
 
 
-# Measurements are constantly being aggregated and reaggreated by different actors, and aren't being archived systematically.
+
+
+# 1) We do not know how many people have had COVID-19 and we will likely never know.
+
+
+# 2)  Measurements are constantly being aggregated and reaggreated by different actors, and aren't being archived systematically.
 
 There is no one in charge, there are no adults in the room. 
 
@@ -80,41 +84,37 @@ COVID Atlas li [@jzohrabCOVIDAtlasLi2020]
 The Covid-Tracking Project [@zachliptonCovidTrackingProject2020]
 
 
-# The measurements we have don't agree with one another,
+# 3) The measurements we have don't agree with one another,
 
 Sources don't agree with each other [@wangComparingIntegratingUS2020]
 
 
-# Desperately looking for other kinds of measurements but no real ground truth
+# 4) Desperately looking for other kinds of measurements but no real ground truth
 
 Surveys
 
 Early warning [@koganEarlyWarningApproach2020]
 
-# The sensors we use to estimate infections have their own complicated data generating processes which we also don't know and can't measure well.
+# 5) The sensors we use to estimate infections have their own complicated data generating processes which we also don't know and can't measure well.
 
 Counts a basically proxing for testing availability not prevalence [@kaashoekCOVID19PositiveCases2020a]
 
 Handling testing induced effects correctly [@kubinecRetrospectiveBayesianModel2020]
 
+# 6) Contrarianism complicates science
 
-
-
-
-# Contrarianism complicates science
-
-# Conformity complicates science
+# 7) Conformity complicates science
 -Bad papers getting through
 -Rough papers getting withdrawn
 -General intolerance for uncertainty
 
-# Medical work with bad statistics
+# 8) Medical work with bad statistics
 
-# Social science with sophisticated statistics but no epidemiological model
+# 9) Social science with sophisticated statistics but no epidemiological model
 
-# Star hunting rather than explaining
+# 10) Star hunting rather than explaining
 
-# Little evaluation, short memories, constantly changing models and forcasts.
+# 11) Little evaluation, short memories, constantly changing models and forcasts.
 
 Forecast Hub [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
 
