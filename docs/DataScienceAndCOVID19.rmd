@@ -38,17 +38,21 @@ As we consider the shape of things to come, we must also consider political scie
 <!-- Commercial, academic, and civil society efforts have stepped forward to fill this gap but often haltingly,  -->
 
 
-# We must care about the truth
+# A. We must care about the truth
 
 <!-- Let's face it, most of our audiences aren't interested in the truth. We must write to the few that do. And if that's not enough of an incentive to care about the truth, then as a field we must develop mechanisms to hold ourselves accountable.  -->
 
 
-# Developing expertise is better than being an expert
+# B. Developing expertise is better than being an expert
 
 <!-- You don't need to be an epidemiologist to make epidemiological claims, but you do need to use epidemiological models. Social scientists can (and should) drive in this lane, but there are some rules to the road -->
 
 
-# Develop standing capabilities and collaborations
+# C. Develop standing capabilities and collaborations
+
+
+
+
 
 
 
@@ -57,7 +61,7 @@ As we consider the shape of things to come, we must also consider political scie
 
 
 
-
+# REX'S EXISTING TWITTER COVID RANTS
 
 
 # 1) We do not know how many people have had COVID-19 and we will likely never know.
