@@ -1,0 +1,26 @@
+---
+title: "Scrap"
+author: "Scherer"
+date: "August 14, 2020"
+output: html_document
+---
+
+Foremost, it showed that government institutions lack the capacity to  public health needs of their constituents.
+
+address all of the scientific, safety, and
+
+Commercial, academic, and civil society efforts have stepped forward to fill this gap but often haltingly,
+
+
+# A. We must care about the truth
+
+Let's face it, most of our audiences aren't interested in the truth. We must write to the few that do. And if that's not enough of an incentive to care about the truth, then as a field we must develop mechanisms to hold ourselves accountable.
+
+# B. Developing expertise is better than being an expert
+
+You don't need to be an epidemiologist to make epidemiological claims, but you do need to use epidemiological models. Social scientists can (and should) drive in this lane, but there are some rules to the road
+
+# C. Develop standing capabilities and collaborations
+
+# Open source / publication process
+Archive getting hammered

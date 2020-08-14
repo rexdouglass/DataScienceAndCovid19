@@ -27,47 +27,18 @@ bibliography: cpas_covid_19.bib
 
 # Introduction
 
-The SARS-COV-2 global pandemic has exposed weaknesses throughout our institutions and organizations, and the social sciences is no exception. Even today, a half a year into the deadliest crisis most of us will ever see, we are still unable to answer basic questions about how human society should respond to the pandemic. [Example?]
+The SARS-COV-2 global pandemic has exposed weaknesses throughout our institutions and organizations, and the social sciences is no exception. Even today, a half a year into the deadliest crisis most of us will ever see, we still continue to fail to answer essential questions about the causes and consequences of the pandemic. We have assessed the record of COVID research and review some of the most prominent articles and debates. In this article, we detail the three virtues for all research to follow, COVID-related or not, so that we may avoide the same failures going forward. These virtues are data humility, intellectual curiousity, and disciplinary decency. 
 
-As we consider the shape of things to come, we must also consider political science in the post COVID-19 age. To this conversation, we offer four lessons for social science from our own failures in understanding the pandemic.
-
-<!-- Foremost, it showed that government institutions lack the capacity to  public health needs of their constituents.  -->
-
-<!-- address all of the scientific, safety, and -->
-
-<!-- Commercial, academic, and civil society efforts have stepped forward to fill this gap but often haltingly,  -->
-
-
-# A. We must care about the truth
-
-<!-- Let's face it, most of our audiences aren't interested in the truth. We must write to the few that do. And if that's not enough of an incentive to care about the truth, then as a field we must develop mechanisms to hold ourselves accountable.  -->
-
-
-# B. Developing expertise is better than being an expert
-
-<!-- You don't need to be an epidemiologist to make epidemiological claims, but you do need to use epidemiological models. Social scientists can (and should) drive in this lane, but there are some rules to the road -->
-
-
-# C. Develop standing capabilities and collaborations
+[Can add 1-2 paragrafs summarizing body if need filler]
 
 
 
 
+# Data Humility
 
+As political scientists, we are constantly running into data challenges as we try to understand concepts and behaviors that are hard to measure. In contrast, working with COVID-19 should be relatively straight forward. Governments are routinely reporting the number of cases and deaths which we can simply merge into our datasets and include in a regression. To do so would be to propagate a lie. Before we continue with any COVID research, we must show data humility and understand what we are actually working with.
 
-
-# Open source / publication process
-<!-- Archive getting hammered -->
-
-
-
-# REX'S EXISTING TWITTER COVID RANTS
-
-
-# 1) We do not know how many people have had COVID-19 and we will likely never know.
-
-
-# 2)  Measurements are constantly being aggregated and reaggreated by different actors, and aren't being archived systematically.
+## 2)  Measurements are constantly being aggregated and reaggreated by different actors, and aren't being archived systematically.
 
 There is no one in charge, there are no adults in the room. 
 
@@ -87,38 +58,72 @@ COVID Atlas li [@jzohrabCOVIDAtlasLi2020]
 
 The Covid-Tracking Project [@zachliptonCovidTrackingProject2020]
 
+cases and deaths
+IFR should be bimodal and varies over time.
 
-# 3) The measurements we have don't agree with one another,
+## 3) The measurements we have don't agree with one another,
 
 Sources don't agree with each other [@wangComparingIntegratingUS2020]
 
 
-# 4) Desperately looking for other kinds of measurements but no real ground truth
+## 4) Desperately looking for other kinds of measurements but no real ground truth
 
 Surveys
 
 Early warning [@koganEarlyWarningApproach2020]
 
-# 5) The sensors we use to estimate infections have their own complicated data generating processes which we also don't know and can't measure well.
+## 5) The sensors we use to estimate infections have their own complicated data generating processes which we also don't know and can't measure well.
 
 Counts a basically proxing for testing availability not prevalence [@kaashoekCOVID19PositiveCases2020a]
 
 Handling testing induced effects correctly [@kubinecRetrospectiveBayesianModel2020]
 
-# 6) Contrarianism complicates science
+## 1) We do not know how many people have had COVID-19 and we will likely never know.
 
-# 7) Conformity complicates science
+
+
+# Intellectual Curiousity
+
+Science is about being curious about the true state of the world. Intellectual curious is not just a motivation, but also an ethical guardrail against outside pressures. Too often, society rewards bad science with attention, prestige, and accolades. Bad science may be propped up in order to support preferred policies, justify profitable behavior, or simply as entertainment. COVID-19 is no exception, even though the stakes are literally life and death. To move beyond past failures, our work must be driven by intellectual curiousity. 
+
+
+, and through application of evidence and methods, forming new more true beliefs than we held the day before.
+
+
+## 6) Contrarianism complicates science
+
+## 10) Star hunting rather than explaining
+
+## 11) Little evaluation, short memories, constantly changing models and forcasts.
+
+
+
+# Disciplinary Decency
+
+[INTRO PARAGRAPH]
+
+## 7) Conformity complicates science
 -Bad papers getting through
 -Rough papers getting withdrawn
 -General intolerance for uncertainty
 
-# 8) Medical work with bad statistics
+## 8) Medical work with bad statistics
 
-# 9) Social science with sophisticated statistics but no epidemiological model
+## 9) Social science with sophisticated statistics but no epidemiological model
 
-# 10) Star hunting rather than explaining
 
-# 11) Little evaluation, short memories, constantly changing models and forcasts.
+
+
+
+
+
+
+
+
+
+
+# More Scrap
+
 
 Forecast Hub [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
 
@@ -127,13 +132,7 @@ Bayesian estimate of R_t @[#BayesianNowcastingAdjustment]
 
 
 
-
 Government responses "13,000 such policy announcements across more than 195 countries" [@chengCOVID19GovernmentResponse2020]
-
-
-
-
-
 
 
 
