@@ -83,6 +83,8 @@ COVID Atlas li [@jzohrabCOVIDAtlasLi2020]
 
 The Covid-Tracking Project [@zachliptonCovidTrackingProject2020]
 
+cases and deaths
+IFR should be bimodal and varies over time.
 
 # 3) The measurements we have don't agree with one another,
 
