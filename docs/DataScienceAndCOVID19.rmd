@@ -35,7 +35,10 @@ There is a growing effort to forecast how the world will differ after the COVID-
 
 To begin, we first describe our understanding of the pandemic in a hypothetical ideal world. In an ideal world, we would know to an approximation how the disease spreads in a population without any interventions, the rate of spread at time zero $R_0$, and we would know how that changes over time before, during, and after interventions, $R_t$. The testing regime that serves to measure this would be extensive, well understood, and uniform over time and space so that changes in known cases would be attributed to changes in the rate of spread and not the testing regime. Likewise, who dies from the disease would be well and consistently measured over time and space so that both know the inherent danger of the disease, the Infected Fatality Rate (IFR), and we can see that rate go up or down in response to interventions and resource constraints. With the above in hand, we would be able to make careful, reasoned, an equitable decisions about how to make takeoffs in choices that have long term health benefits but short term economic costs or short term economic benefits but long term health costs. We could plan for when, not if, the next pandemic arrives, and successfully anticipate the long term changes to domestic and international affairs.
 
-Unfortunately, none of the above exists.
+None of the above exists. Depending on how closely one follows COVID-19 research, this may come as more or less of a surprise. On the one hand, there are a seemingly endless parade of reports on failures of testing, flip-flopping guidance on masks, flip-flopping guidance on mass-events, government efforts to limit or misrepresent case counts, etc. Unfortunately, these problems are just the tip of the iceberg for our issues of understanding this pandemic. Many of the things we take for granted are also problematic in sometimes subtle ways.
+
+
+
 
 
 
