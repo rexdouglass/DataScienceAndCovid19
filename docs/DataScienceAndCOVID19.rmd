@@ -1,5 +1,5 @@
 ---
-title: "Data Science and COVID-19: 10 Current and Future Trends"
+title: "The Data Science of COVID-19 Spread: Some Troubling Current and Future Trends"
 author:
   - name: Rex Douglass
     email: rexdouglass@gmail.com
@@ -33,144 +33,107 @@ The SARS-COV-2 global pandemic has exposed weaknesses throughout our institution
 
 There is a growing effort to forecast how the world will differ after the COVID-19 pandemic. Unfortunately, such en effort presupposes a clarity of measurement and understanding about the COVID-19 pandemic that largely does not exist now and might never materialize. This brief note outlines ways in which the COVID-19 pandemic caught our political and scientific institutions off guard and how the global effort to catch up will be able to close the distance. Where possible we highlight some places for optimism, some places for improvement, and some places to level expectations.
 
-To begin, we first describe our understanding of the pandemic in a hypothetical ideal world. In an ideal world, we would know to an approximation how the disease spreads in a population without any interventions, the rate of spread at time zero $R_0$, and we would know how that changes over time before, during, and after interventions, $R_t$. The testing regime that serves to measure this would be extensive, well understood, and uniform over time and space so that changes in known cases would be attributed to changes in the rate of spread and not the testing regime. Likewise, who dies from the disease would be well and consistently measured over time and space so that we both know the inherent danger of the disease, the Infected Fatality Rate (IFR), and we can see that rate go up or down in response to interventions and resource constraints. With the above in hand, we would be able to make careful, reasoned, an equitable decisions about how to make takeoffs in choices that have long term health benefits but short term economic costs or short term economic benefits but long term health costs. We could plan for when, not if, the next pandemic arrives, and successfully anticipate the long term changes to domestic and international affairs.
+# Questions We Want to Answer
 
-None of the above exists. Depending on how closely one follows COVID-19 research, this may come as more or less of a surprise. On the one hand, COVID-19 statistics are ubiquitous, over 300 new COVID-19 pre-publication papers are posted a day [@COVID19Primer], many countries have brought the spread under control, and there is race to complete trials on a number of vaccine candidates. On the other hand, there are a seemingly endless parade of reports on failures of testing, flip-flopping guidance on masks, flip-flopping guidance on mass-events, government efforts to limit or misrepresent case counts, etc. Not every country, has their spread under control, and many are just now beginning to enter their curves. Unfortunately, these problems are just the tip of the iceberg for our issues of understanding this pandemic. Many of the things we take for granted are also problematic in sometimes subtle ways.
+How do we protect ourselves and our loves ones? What have been the consequences of non-pharmaceutical interventions, and which ones would employ going forward? What have the costs been? How were those costs distributed? What second order and third effects have there been?
 
-Perhaps most taken for granted is that we have a claer understanding of how we got to this point, in terms of the introduction, spread, and decline of COVID-19 infections and deaths. The institutional data generating process of COVID-19 data is as important if not more important than the empirical data generating process we care about. How measurements are taken, aggregated, and shared are often a larger source of variation than the actual empirical phenomenon. This pandemic is no exception. Take the most widely reported figure, COVID-19 confirmed cases. As of this writing, the U.S. Centers for Disease Control reports 5.2 million cases in the United States [@cdcCoronavirusDisease20192020]. The CDC does not directly measure COVID-19 cases, it is an aggregator of reports from 60 local, state, territorial, and tribal public health authorities. As you might imagine, these different jurisdictions do not always define cases the same way, nor are those definitions constant over time. ^[In April 14, 2020 the CDC started adding together both reports of confirmed and probable, even though some states don't report probable cases or aggregate the two.] The CDC has some ability to reach directly past states to hospitals and laboratories through the Emerging Infections Program (EIP) and the Influenza Hospitalization Surveillance Project (IHSP), but it is for a limited sample of participating locations. The CARES Act in March of 2020 standardized some reporting requirements from states to the CDC, but then for unclear reasons reporting was abruptly transferred to Health and Human Services (HHS). The picture at the state level and below isn't better. States also are aggregaters from hospitals, healthcare providers, and laboratories. Depending on their size, cities have their own additional reporting structure that rivals some states. 
+In an ideal world, we would know to an approximation how the history of how the disease spread in the population prior to interventions, the rate of spread at time zero $R_0$, and we would know how that changes over time before, during, and after interventions, $R_t$. The testing regime that serves to measure this would be extensive, well understood, and uniform over time and space so that changes in known cases would be attributed to changes in the rate of spread and not the testing regime. Likewise, who dies from the disease would be well and consistently measured over time and space so that we both know the inherent danger of the disease, the Infected Fatality Rate (IFR), and we can see that rate go up or down in response to interventions and resource constraints. With the above in hand, we would be able to make careful, reasoned, an equitable decisions about how to make takeoffs between economic costs and health consequences. We could plan for when, not if, the next pandemic arrives, and successfully anticipate the long term changes to domestic and international affairs.
 
-Worse, these bureaucracies are concerned primarily with releasing legally required contemporary measurements and not maintaining consistent historical time series. What has resulted is the world's largest most desperate data scavenger hunt to scrape, transcribe, and translate counts disseminated in oral briefings, public websites, pdfs, and even static images. Multiple teams from every country are working in often uncoordinated and duplciated efforts to munge government reporting into consistent panel data covering places over time. The actors include newspapers and nonprofits like the New York Times [@albertsunNewYorkTimes2020] and USAfacts [@usafactsUSCoronavirusCases2020]. Private companies with existing largescale data collection efforts have stepped up including Bing [@chiqunzhangBingCOVID19Data2020] and Yahoo [@ashleywolfYahooKnowledgeGraph2020]. Consortiums of volunteers have emerged to write scrapers and collect counts by hand, 1Point3Acres [@yangCovidNetBringData2020], COVID Atlas li [@jzohrabCOVIDAtlasLi2020], Covid-19-India [@covid19indiaorg2020tracker]. Wikipedia has emerged as a near-real time massively crowdsourced authority.
-
-The result is an ecosystem of fractured panel datasets, with varying holes in spatial and temporal coverage, and little metadata about sources, changes in definitions, and revisions to past counts from reporting sources. Comparisons between sources reveal worrying disagreements between aggregations [@wangComparingIntegratingUS2020]. They also reveal a number of idiosyncratic temporal issues, including delays in reporting, reporting luls around weekends and holidays, discontinuities and sudden revisions in counts upwards, or downwards, etc. It is not obvious how to correctly account for this problems or adjudicate between conflicting sources without a clear ground truth. There also isn't a archive of snapshots of the source material for many of these sources, meaning reconstructing these aggregatoins from raw sources may not be possible. 
-
-In practical terms, this means that one of the main inputs to our empidimiological models isn't fixed, it is the product of its own data generating process with both error and systematic determinants. Very few models take this into account, and at a minimum their confidence intervals should be considered a lower bound of uncertainty. That is especially true toward the early months of the pandemic when reporting was most quickly changing. This is especially problematic because this is where we estimate R_0.
-
-The elephant in the COVID-19 measurement room is the role of testing, and how it also has a separate, poorly understood, poorly measured, data generating process. Efforts like the Covid-Tracking Project [@zachliptonCovidTrackingProject2020] have fought to collect state level testing data and faced all of regular problems plus additional ones about what kinds testing numbers (testing encounters, number of people tested ever, number of swabs tested, etc.). Further the type of test performed, and its false positive and false negative rate, is almost never included as metadata in aggregate test reports making comparison over time and location dubious.
-
-The centrality of the testing data generating process to epidimiological data generating process can't be understated. Per-capita testing rates are so strongly correlated with per-capita case rates, temporarily cases counts are nearly as proxy for testing availability, particularly in the early growth period of an outbreak [@kaashoekCOVID19PositiveCases2020a]. Spatially, per-capita testing rates also correlate with urbanity and co-morbids [@souchCommentaryRuralUrban2020]. Further, both how many tests are given and who gets those tests varies dynamically in response to conditions on the ground. One might want to try to use positivity rate instead of case counts, but as the case count rises, 
+Depending on how closely one follows COVID-19 research, it may come as more or less of a surprise that our understanding of this pandemic is nowhere near that of the ideal. On the one hand, COVID-19 statistics are ubiquitous, over 300 new COVID-19 pre-publication papers are posted a day [@COVID19Primer], many countries have brought the spread under control, and there is race to complete trials on a number of vaccine candidates. On the other hand, there are a seemingly endless parade of reports on failures of testing, flip-flopping guidance on masks, flip-flopping guidance on mass-events, government efforts to limit or misrepresent case counts, etc. Not every country, has their spread under control, and many are just now beginning to enter their curves. These problems are just the tip of the iceberg for our issues of understanding this pandemic. Many of the things we take for granted are problematic in sometimes subtle ways.
 
 
-Comparisons across these different collection highlight major discrepancies between the series, 
+# Problems of Measurement
 
+Perhaps most taken for granted is that we have a clear understanding of how we got to this point, in terms of the introduction, spread, and decline of COVID-19 infections and deaths. We don't. Largely because, the institutional process of how measurements are taken, aggregated, and shared are often a larger source of variation than the actual empirical phenomenon. We have an increasingly sophisticated surveillance system, but its resolution is still too course to tell much more beyond general macro trends. Further, it started from such a low point, that most of the very important information about how the disease spread at the outset may be lost to time entirely.
 
-Most case counts are geographic, even though there is growing evidence of differential rates across age and race.
+Take the most widely reported figure, confirmed cases. As of this writing, the U.S. Centers for Disease Control reports 5.2 million cases in the United States [@cdcCoronavirusDisease20192020]. The CDC does not directly measure COVID-19 cases, it is an aggregator of reports from 60 local, state, territorial, and tribal public health authorities. These different jurisdictions do not always define cases the same way, nor are those definitions constant over time. ^[In April 14, 2020 the CDC started adding together both reports of confirmed and probable, even though some states don't report probable cases or aggregate the two.] The CDC has some ability to reach directly past states to hospitals and laboratories through the Emerging Infections Program (EIP) and the Influenza Hospitalization Surveillance Project (IHSP), but it is for a limited sample of participating locations. ^[The CARES Act in March of 2020 standardized some reporting requirements from states to the CDC, but then for unclear reasons reporting was abruptly transferred to Health and Human Services (HHS). The picture at the state level and below isn't better. States also are aggregaters from hospitals, healthcare providers, and laboratories.] Depending on their size, cities have their own additional reporting structure that rivals some states. 
 
+Worse, these bureaucracies are concerned primarily with releasing legally required contemporary measurements and not maintaining consistent historical time series. What has resulted is the world's largest most desperate data scavenger hunt to scrape, transcribe, and translate counts disseminated in oral briefings, public websites, pdfs, and even static images [@alamoCovid19OpenDataResources2020]. Multiple teams from every country are working in often uncoordinated and duplciated efforts to munge government reporting into consistent panel data covering places over time. The actors include newspapers and nonprofits like the New York Times [@albertsunNewYorkTimes2020] and USAfacts [@usafactsUSCoronavirusCases2020]. Private companies with existing largescale data collection efforts have stepped up including Bing [@chiqunzhangBingCOVID19Data2020] and Yahoo [@ashleywolfYahooKnowledgeGraph2020]. Consortiums of volunteers have emerged to write scrapers and collect counts by hand, e.g. 1Point3Acres [@yangCovidNetBringData2020], COVID Atlas li [@jzohrabCOVIDAtlasLi2020], Covid-19-India [@covid19indiaorg2020tracker]. Wikipedia has emerged as a near-real time massively crowdsourced authority.
 
-# Data Humility
+The result is an ecosystem of fractured panel datasets, with varying holes in spatial and temporal coverage, and little metadata about sources, changes in definitions, and revisions to past counts from reporting sources. Comparisons between sources reveal worrying disagreements between aggregations [@wangComparingIntegratingUS2020]. They also reveal a number of idiosyncratic temporal artifacts, including delays in reporting, reporting lulls around weekends and holidays, discontinuities and sudden revisions in counts upwards, or downwards, etc. It is not obvious how to correctly account for these problems or adjudicate between conflicting sources without a clear ground truth. There also isn't an archive of snapshots of the source material for many of these sources, meaning reconstructing these aggregations from raw sources may not be possible in the future. 
 
-As political scientists, we are constantly running into data challenges as we try to understand concepts and behaviors that are hard to measure. In contrast, working with COVID-19 should be relatively straight forward. Governments are routinely reporting the number of cases and deaths which we can simply merge into our datasets and include in a regression. To do so would be to propagate a lie. Before we continue with any COVID research, we must show data humility and understand what we are actually working with.
+More importantly, confirmed cases are just a proxy for what we really want to know, actual cases. The elephant in the COVID-19 measurement room is that the relationship between confirmed cases and actual cases depends largely on another poorly measured and poorly understood data generating process around COVID-19 testing. As with confirmed cases, initially journalistic and private efforts like the Covid-Tracking Project [@zachliptonCovidTrackingProject2020] are our main source of testing counts over time. They encountered all of the regular problems plus additional ones about what kinds tests were being reported (testing encounters, number of people tested ever, number of swabs tested, etc). These raw counts aren't generally available below the state level. ^[See [@NewCOVID19Testing2020] for a rare cross-section.] The type of test performed, and its false positive and false negative rate, is almost never included as metadata. Nor are the rules about how tests are being rationed and distributed recorded systematically.
 
-## 2)  Measurements are constantly being aggregated and reaggreated by different actors, and aren't being archived systematically.
+The centrality of the testing data generating process to epidemiological data generating process can't be understated. Per-capita testing rates are so temporarily correlated with per-capita case rates, case counts are more of as proxy for testing availability than actual cases, particularly in the early growth period of an outbreak [@kaashoekCOVID19PositiveCases2020a]. Spatially, per-capita testing rates also correlate with urbanity and co-morbids- we under test in places with weaker health infrastructure and worse preexisting health problems [@souchCommentaryRuralUrban2020]. Further, both how many tests are given and who gets those tests varies dynamically in response to conditions on the ground with tests rationed in peak times and reduced during good lulls. 
 
-There is no one in charge, there are no adults in the room. 
+# Problems of Inference
 
-Lit review of sources [@alamoCovid19OpenDataResources2020]
+In practical terms, this means that one of the main inputs to our epidemiological models isn't fixed, it is the product of its own data generating process with both error and systematic determinants. Very few models take this into account, and at a minimum their confidence intervals should be considered a lower bound of uncertainty. That is especially true toward the early months of the pandemic when reporting was most quickly changing.
 
+The measurement problems described above reverberate into modeling efforts and research designs in sometimes subtle ways. One way is in efforts to find alternative ground truths or correlated signals that be used to triangulate or at least bound the real case number over time. The most credible are serological surveys that look for antibodies that are indicative of having had COVID-19 [@peelingSerologyTestingCOVID192020]. At their best, a well designed serological stratified survey can at most tell us how many people have had COVID-19 in the past. Since these are typically one off and not rolling surveys, we at most only ground truth cross-sections of time now and not reconstruct the critical time series leading up to this point. At their worst, serolgical surveys are being used on convenience samples that aren't representative of the general population. Further, there are dozens of commercial antibody tests approved now with varying claims of specificity and sensitivity, which are either being ignored or misrepresented in analysis. 
 
+Surveys
 
+One might want to try to use positivity rate instead of case counts, but as the case count rises, 
 
 cases and deaths
 IFR should be bimodal and varies over time.
 
-## 3) The measurements we have don't agree with one another,
 
 
-
-## 4) Desperately looking for other kinds of measurements but no real ground truth
-
-Surveys
-
+Other efforts are focused on using novel signals 
 Early warning [@koganEarlyWarningApproach2020]
 
-## 5) The sensors we use to estimate infections have their own complicated data generating processes which we also don't know and can't measure well.
+COVID-19 as an instrument.
 
-
+Model evaluation
 
 Handling testing induced effects correctly [@kubinecRetrospectiveBayesianModel2020]
 
-## 1) We do not know how many people have had COVID-19 and we will likely never know.
+Forecast Hub [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
+
+Bayesian estimate of R_t @[#BayesianNowcastingAdjustment]
+
+Government responses "13,000 such policy announcements across more than 195 countries" [@chengCOVID19GovernmentResponse2020]
+
+Medical work with bad statistics
+
+Social science with sophisticated statistics but no epidemiological model
+
+Star hunting rather than explaining
+
+Little evaluation, short memories, constantly changing models and forcasts.
 
 
-
-# Intellectual Curiousity
+# Problems of Scientific Culture
 
 Science is about being curious about the true state of the world. Intellectual curious is not just a motivation, but also an ethical guardrail against outside pressures. Too often, society rewards bad science with attention, prestige, and accolades. Bad science may be propped up in order to support preferred policies, justify profitable behavior, or simply as entertainment. COVID-19 is no exception, even though the stakes are literally life and death. To move beyond past failures, our work must be driven by intellectual curiousity. 
 
+Contrarianism
 
-, and through application of evidence and methods, forming new more true beliefs than we held the day before.
+Problems of contrarianism
 
+Conformity
+Similarly 
 
-## 6) Contrarianism complicates science
-
-## 10) Star hunting rather than explaining
-
-## 11) Little evaluation, short memories, constantly changing models and forcasts.
-
-
-
-# Disciplinary Decency
-
-[INTRO PARAGRAPH]
-
-## 7) Conformity complicates science
 -Bad papers getting through
 -Rough papers getting withdrawn
 -General intolerance for uncertainty
 
-## 8) Medical work with bad statistics
-
-## 9) Social science with sophisticated statistics but no epidemiological model
-
-
-
-
-
-
-
-
-
-
-
-
-# More Scrap
-
-
-Forecast Hub [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
-
-Don't be discouraged but do the reading.
-Bayesian estimate of R_t @[#BayesianNowcastingAdjustment]
-
-
-
-Government responses "13,000 such policy announcements across more than 195 countries" [@chengCOVID19GovernmentResponse2020]
-
-
-
-Dirty secrets - private institutions produce the data, government institutions aggregate it, private institutions aggregate it again.
-
-We're almost always looking under the streetlamp.
-
-We don't have mechanisms for sorting good evidence from bad.
-
-
-New York Times partnered with Kaiser
-Facts on File
-CDC Flu View
-serelogical evidene
-
-Data science transforms information from one form into another, e.g. county PDFs into time series databases.
-
-Data science studies the institutional data generating processes, reporting varies, that variation can and often is bigger than the signal empiricists want to test in their models.
-
-Data science concerned with performance, and evaluation, e.g. forcasting and measuring performance.
-
+The insistence we have an answer undermined the political and social capital we need to fund and find ethical designs for challenge studies that can actually answer the question. The shift in public campaign strategy generates distrust of experts and conspiracy theories making it more difficult to deliver expert guidance on other issues. There are always some predictable and unpredictable second order effects from misleading people. Over representing the evidence behind masks can mislead people into thinking that masks are more important than or trade off with more effective strategies like social distancing.
 
 The dirty secret of COVID-19 modeling is that there just isn't that much unique information there. You can torture a panel dataset with a small number of units and a high auto-correlation between time units into telling you whatever you want, but that doesn't make it true.
 
 
-### Model evaluation and forcasting
 
+
+# Conclusion
 
 Don't be discouraged but do the reading.
+
+
+
+Comparisons across these different collection highlight major discrepancies between the series, 
+Most case counts are geographic, even though there is growing evidence of differential rates across age and race.
+
+
+
+As political scientists, we are constantly running into data challenges as we try to understand concepts and behaviors that are hard to measure. In contrast, working with COVID-19 should be relatively straight forward. Governments are routinely reporting the number of cases and deaths which we can simply merge into our datasets and include in a regression. To do so would be to propagate a lie. Before we continue with any COVID research, we must show data humility and understand what we are actually working with.
+
+
+
+Desperately looking for other kinds of measurements but no real ground truth
+The sensors we use to estimate infections have their own complicated data generating processes which we also don't know and can't measure well.
+
 
 # References
