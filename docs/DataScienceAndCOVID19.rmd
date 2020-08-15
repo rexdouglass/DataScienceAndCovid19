@@ -35,14 +35,17 @@ There is a growing effort to forecast how the world will differ after the COVID-
 
 To begin, we first describe our understanding of the pandemic in a hypothetical ideal world. In an ideal world, we would know to an approximation how the disease spreads in a population without any interventions, the rate of spread at time zero $R_0$, and we would know how that changes over time before, during, and after interventions, $R_t$. The testing regime that serves to measure this would be extensive, well understood, and uniform over time and space so that changes in known cases would be attributed to changes in the rate of spread and not the testing regime. Likewise, who dies from the disease would be well and consistently measured over time and space so that we both know the inherent danger of the disease, the Infected Fatality Rate (IFR), and we can see that rate go up or down in response to interventions and resource constraints. With the above in hand, we would be able to make careful, reasoned, an equitable decisions about how to make takeoffs in choices that have long term health benefits but short term economic costs or short term economic benefits but long term health costs. We could plan for when, not if, the next pandemic arrives, and successfully anticipate the long term changes to domestic and international affairs.
 
-None of the above exists. Depending on how closely one follows COVID-19 research, this may come as more or less of a surprise. On the one hand, there are a seemingly endless parade of reports on failures of testing, flip-flopping guidance on masks, flip-flopping guidance on mass-events, government efforts to limit or misrepresent case counts, etc. Unfortunately, these problems are just the tip of the iceberg for our issues of understanding this pandemic. Many of the things we take for granted are also problematic in sometimes subtle ways.
+None of the above exists. Depending on how closely one follows COVID-19 research, this may come as more or less of a surprise. On the one hand, COVID-19 statistics are ubiquitous. The first research paper on COVID-19 was published January 21, 2020 and since then the research community has been averaging over 300 new pre-publication papers a day [@COVID19Primer]. Many countries have brought the spread under control, and there is race to complete trials on a number of vaccine candidates. On the other hand, there are a seemingly endless parade of reports on failures of testing, flip-flopping guidance on masks, flip-flopping guidance on mass-events, government efforts to limit or misrepresent case counts, etc. Not every country, has their spread under control, and many are just now beginning to enter their curves. Unfortunately, these problems are just the tip of the iceberg for our issues of understanding this pandemic. Many of the things we take for granted are also problematic in sometimes subtle ways.
 
-The institutional data generating process of COVID-19 data is as important if not more important than the empirical data generating process we care about. How measurements are taken, aggregated, and shared are often a larger source of variation than the actual empirical phenomenon. This pandemic is no exception. Take the most widely reported figure, COVID-19 confirmed cases. As of this writing, the U.S. Centers for Disease Control reports 5.2 million cases in the United States [@cdcCoronavirusDisease20192020]. The CDC does not directly measure COVID-19 cases, it is an aggregator of reports from 60 local, state, territorial, and tribal public health authorities. As you might imagine, these different jurisdictions do not always define cases the same way, nor are those definitions constant over time. ^[In April 14, 2020 the CDC started adding together both reports of confirmed and probable, even though some states don't report probable cases or aggregate the two.] The CDC has some ability to reach directly past states to hospitals and labratories through the Emerging Infections Program (EIP) and the Influenza Hospitalization Surveillance Project (IHSP), but it is for a limited sample of participating locations. At the state level, the problem repeats with health departments aggregating information from hospitals, healthcare providers, and laboratories. 
+Perhaps most taken for granted is that we have an understanding of how we got to this point, in terms of the introduction, spread, and decline of COVID-19 infections and deaths. 
+The institutional data generating process of COVID-19 data is as important if not more important than the empirical data generating process we care about. How measurements are taken, aggregated, and shared are often a larger source of variation than the actual empirical phenomenon. This pandemic is no exception. Take the most widely reported figure, COVID-19 confirmed cases. As of this writing, the U.S. Centers for Disease Control reports 5.2 million cases in the United States [@cdcCoronavirusDisease20192020]. The CDC does not directly measure COVID-19 cases, it is an aggregator of reports from 60 local, state, territorial, and tribal public health authorities. As you might imagine, these different jurisdictions do not always define cases the same way, nor are those definitions constant over time. ^[In April 14, 2020 the CDC started adding together both reports of confirmed and probable, even though some states don't report probable cases or aggregate the two.] The CDC has some ability to reach directly past states to hospitals and laboratories through the Emerging Infections Program (EIP) and the Influenza Hospitalization Surveillance Project (IHSP), but it is for a limited sample of participating locations. The CARES Act in March of 2020 standardized some reporting requirements from states to the CDC, but then for unclear reasons reporting was abruptly transferred to Health and Human Services (HHS). The picture at the state level and below isn't better. States also are aggregaters from hospitals, healthcare providers, and laboratories. Depending on their size, cities have their own additional reporting structure that rivals some states. 
+
+Shockingly, all of these different reporting bureaucracies are not concerned primarily with maintaining a historical time series that can be used to track trends but rather single contemporary measurements. Counts are taken and then disseminated in oral briefings, public websites, pdfs, and even static images. What has resulted is the world's largest most desperate data scavenger hunt. Multiple teams from every country are working in often uncordinated and duplciated efforts to scrape, transcribe, and translate government reporting into consistent panel data covering places over time. In the U.S., the New York Times [@albertsunNewYorkTimes2020] and USAfacts [@usafactsUSCoronavirusCases2020] work to build comprehensive county level counts.
+
+Comparisons across these different collection highlight major discrepancies between the series, [@wangComparingIntegratingUS2020]
 
 
 
-
-Prior to the CARES Act
 
 Civil society
 The Covid-Tracking Project [@zachliptonCovidTrackingProject2020]
@@ -51,9 +54,9 @@ The Covid-Tracking Project [@zachliptonCovidTrackingProject2020]
 Most case counts are geographic, even though there is growing evidence of differential rates across age and race.
 
 
-New York Times [@albertsunNewYorkTimes2020]
 
-USAfacts [@usafactsUSCoronavirusCases2020]
+
+
 
 
 # Data Humility
@@ -72,7 +75,6 @@ Bing [@chiqunzhangBingCOVID19Data2020]
 
 Yahoo [@ashleywolfYahooKnowledgeGraph2020]
 
-
 COVID Atlas li [@jzohrabCOVIDAtlasLi2020]
 
 
@@ -81,7 +83,6 @@ IFR should be bimodal and varies over time.
 
 ## 3) The measurements we have don't agree with one another,
 
-Sources don't agree with each other [@wangComparingIntegratingUS2020]
 
 
 ## 4) Desperately looking for other kinds of measurements but no real ground truth
