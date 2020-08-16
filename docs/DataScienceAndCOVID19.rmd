@@ -27,24 +27,62 @@ bibliography: cpas_covid_19.bib
 
 # Introduction
 
-The SARS-COV-2 global pandemic has exposed weaknesses throughout our institutions, and the sciences are no exception. In this brief review, we enumerate ways that data science can and has contributed to filling or at least highlighting some of these weaknesses. Given the deluge of official statistics and average of over 300 new working papers posted a day, it is a ripe time to consolidate guidance for both consumers and producers of COVID-19 knowledge [@COVID19Primer].
+The SARS-COV-2 global pandemic has exposed weaknesses throughout our institutions, and the sciences are no exception. In this brief review, we enumerate ways that data science can and has contributed to filling or at least highlighting some of these weaknesses. Given the deluge of official statistics and 300+ new COVID-19 working papers posted each day, it is a ripe time to consolidate guidance for both consumers and producers of COVID-19 knowledge.^[[@COVID19Primer]]
 
-In terms of understanding where we are, how we got here, and what is likely to follow, here are some things we are curious to know. We want to know what the rate of spread of COVID-19 is within a population, $R$, prior to any non-pharmaceutical interventions, $R_{0}$, over time following interventions/nonintervention $R_{t}$, and importantly across different political and demographic communities, $R_{ct}$. We want to know at any given point in time how many cases of active infection exist in a community, $C_{ct}$, and how many of those infections resulted in death $D_{ct}$. We want to know the causal effect of interventions, $X_{ct}$, on say rate of spread, between the observed treated populations $R_{ct1}$ and the counterfactual populations had they not been treated $R_{ct0}$. To do so, we will need some plausible identification strategy that will allows us to account for the fact that interventions are themselves chosen and implemented in response to changes in $R_{ct}$, and that many third factors likely drive both $R_{ct}$ and $X_{ct}$. These unkonwons give rise to fundamental problems of measurement, inference, and interpretation.
+In terms of understanding where we are, how we got here, and what is likely to follow, here are some of the things we are curious to know. We want to know the rate of spread of COVID-19 in a population, $R$, prior to any non-pharmaceutical interventions, $R_{0}$, over time following interventions/nonintervention $R_{t}$, and importantly across different political and demographic communities, $R_{ct}$. We want to know at any given point in time how many cases of active infection exist in a community, $C_{ct}$, and how many of those infections resulted in death $D_{ct}$. We want to know the causal effect of interventions, $X_{ct}$, on say rate of spread, between the observed treated populations $R_{ct1}$ and the counterfactual populations had they not been treated $R_{ct0}$. To do so, we will need some plausible identification strategy that allows us to account for the fact that interventions are themselves chosen and implemented in response to changes in $R_{ct}$, and that many third factors likely drive both $R_{ct}$ and $X_{ct}$. These unknowns give rise to fundamental problems of measurement, inference, and interpretation.
 
 # Measurement
 
-There is no direct measure of $C_{ct}$. The closest we have are serological estimates of Cumulative Confirmed Cases, $CCC_ct$. These are surveys that measure the presence of antibodies in a given population which is an indication of what percent have had COVID-19 at some point in the past, and cannot tell us how recently. They are still rarely available and they have false positive rates that make them inappropriate for populations early in their spread [@peelingSerologyTestingCOVID192020]. Further, they require careful sampling designs comparable to opinion surveys, otherwise their findings may not be representatvie of the full underlying population.
+There is no direct measure of $C_{ct}$. The closest we have are serological estimates of Cumulative Confirmed Cases, $CCC_{ct}$. These are surveys that measure the presence of antibodies in a given population which is an indication of what percent have had COVID-19 at some point in the past, and cannot tell us how recently. They are still rarely available and they have false positive rates that make them inappropriate for populations early in their spread [@peelingSerologyTestingCOVID192020]. Further, they require careful sampling designs comparable to opinion surveys, otherwise their findings may not be representatvie of the full underlying population.
 
-More commonly used are the problematic measures of currently Confirmed Cases, $CC_ct$. CVOID-19 tests are administered in a jurisdiction, and positive cases are tabulated, reported, and aggregated by increasingly nested institutional bureaucracies. These bureaucracies are concerned primarily with releasing legally required contemporary measurements and not maintaining consistent historical time series. This has resulted is the world's largest most desperate scavenger hunt to scrape, transcribe, and translate counts disseminated in oral briefings, public websites, pdfs, and even static images [@alamoCovid19OpenDataResources2020]. Teams from every country are working in often uncoordinated and duplicated efforts to mung government reporting into consistent panel data including newspapers and nonprofits (New York Times [@albertsunNewYorkTimes2020] and USAfacts [@usafactsUSCoronavirusCases2020]), private companies with existing largescale data collection efforts (Bing [@chiqunzhangBingCOVID19Data2020] and Yahoo [@ashleywolfYahooKnowledgeGraph2020]),  consortiums of volunteers (1Point3Acres [@yangCovidNetBringData2020], COVID Atlas li [@jzohrabCOVIDAtlasLi2020], Covid-19-India [@covid19indiaorg2020tracker]), and Wikipedia has emerged as a near-real time massively crowdsourced authority.
+More commonly available are currently Confirmed Cases, $CC_{ct}$. CVOID-19 tests are administered in a jurisdiction, and positive cases are tabulated, reported, and aggregated by increasingly nested bureaucracies. These bureaucracies are concerned primarily with releasing legally required contemporary measurements and not maintaining consistent historical time series. This has resulted is the world's largest most desperate scavenger hunt to scrape, transcribe, and translate counts disseminated in oral briefings, public websites, PDFs, and even static images [@alamoCovid19OpenDataResources2020]. Teams from every country are working in often uncoordinated and duplicated efforts to mung government reporting into consistent panel data including newspapers [@albertsunNewYorkTimes2020], and nonprofits [@usafactsUSCoronavirusCases2020], large private companies [@chiqunzhangBingCOVID19Data2020; @ashleywolfYahooKnowledgeGraph2020], consortiums of volunteers [@yangCovidNetBringData2020, @jzohrabCOVIDAtlasLi2020, @covid19indiaorg2020tracker, and Wikipedians.
 
-The resulting ecosystem of panel datasets varying in spatial and temporal coverage, have little metadata about sources or changing definitions, and do not generally handle revisions to past counts from reporting sources. Direct comparisons between sources reveal worrying disagreements between sources and temporal artifacts like reporting delays, seasonalities, discontinuities, and sudden revisions in counts upwards, or downwards [@wangComparingIntegratingUS2020]. It is not obvious how to correctly account for these problems or adjudicate between conflicting sources without a clear ground truth. There also isn't an archive of snapshots of the source material for many of these sources, meaning reconstructing these aggregations from raw sources may not be possible in the future. 
-Likewise, we do not have direct measures of $D_{ct}$ but only Confirmed Deaths $CD_{ct}$. $CD_{ct}$ suffers from all of the same problems as $CC_ct$, but it is thought that under-reporting is less of, but still a very real, problem. Choosing $CD_{ct}$ as the lesser of two evils, many projects attempt to take estimates of the Infected Fatality Rate, $IFR=D/C$  [@meyerowitz-katzSystematicReviewMetaanalysis2020], to infer plausible ranges for $C$. Others have turned to estimating Excess Deaths, $ED_{ct}$, which is a number proportional to the number of total deaths reported in an area above what would be expected given the number of deaths reported in previous years [@weinbergerEstimationExcessDeaths2020]. $ED_{ct}$ is also not a direct estimate of $D_{ct}$ as it can include deaths that were not caused by COVID-19 directly, e.g. other health conditions that received inadequate care during this period, and similarly can undercount the number of COVID-19 caused deaths as lockdowns reduce mobility and economic activity that might typically lead to deaths, e.g. car accidents.
+The resulting ecosystem of panel datasets vary in spatial and temporal coverage, have little metadata about sources or changing definitions, and do not generally handle revisions to past counts from reporting sources. Direct comparisons between sources reveal worrying disagreements and temporal artifacts like reporting delays, seasonalities, discontinuities, and sudden revisions in counts upwards, or downwards [@wangComparingIntegratingUS2020]. It is not obvious how to correctly account for these problems or adjudicate between conflicting sources without a clear ground truth. There also isn't generally an archive of snapshots of the source material meaning reconstructing the full chain of evidence may no longer be possible. 
+
+Likewise, we do not have direct measures of $D_{ct}$ but only Confirmed Deaths, $CD_{ct}$. $CD_{ct}$ suffers from all of the same problems as $CC_{ct}$, but is thought to suffer from less under-reporting. Choosing $CD_{ct}$ as the lesser of two evils, many projects attempt to take estimates of the Infected Fatality Rate, $IFR=D/C$  [@meyerowitz-katzSystematicReviewMetaanalysis2020], to infer plausible ranges for $C$. Others have turned to estimating Excess Deaths, $ED_{ct}$, which is a number proportional to the number of total deaths reported in an area above what would be expected given the number of deaths reported in previous years [@weinbergerEstimationExcessDeaths2020]. $ED_{ct}$ is also not a direct estimate of $D_{ct}$ as it can include deaths that were not caused by COVID-19 directly, e.g. other health conditions that received inadequate care during this period, and similarly can undercount the number of COVID-19 caused deaths as lockdowns reduce mobility and economic activity that might typically lead to deaths, e.g. car accidents.
+
+Confirmed case and death counts mechanically depend on testing, but records of tests administered, $T_{ct}$, are even worse. In the U.S., much of what we know about trends in testing patterns come from journalistic efforts like the Covid-Tracking Project [@zachliptonCovidTrackingProject2020]. They encountered all of the regular problems plus additional ones specific to ambiguity to what kind of test count is being reported (testing encounters, number of people tested ever, number of swabs tested, etc). The type of test performed, and its false positive and false negative rate, is almost never included as metadata. Nor are the rules about how tests are being rationed and distributed recorded systematically. Further, these raw counts aren't generally available below the state level. ^[See [@NewCOVID19Testing2020] for a rare cross-section.] 
+
+The general failure to track COVID-19 spread directly has led to a proliferation of innovative attempts to use other signals as proxies for cases. These include web searches, searches of medical databases, social media posts, fevers reported by home thermometer, and traditional flu symptom survailence networks [@koganEarlyWarningApproach2020]. While promising, proxy measures require ground truthing and regular calibration using something like regularly timed serological surveys on smaller geographic sample of the population.
+
+Finally, non-pharmaceutical interventions are tracked by several academic and nonprofit teams [@haleVariationGovernmentResponses2020; @chengCOVID19GovernmentResponse2020a]. These interventions are intended to limit human mobility which is more directly measured by cell phone data provided by Google, Apple, SafeGraph, etc. <!--need the cite -->
+
+# Inferences
+
+The workhorse theoretical model for infectious disease spread is the Susceptible, Exposed, Infectious, and Removed (SEIR) compartmental model [@brauerMathematicalModelsPopulation2012]. The intuition behind the SEIR model is that there are mechanical relationships, such as previous infections or deaths removing candidates from infection, the timing between exposure to the next possible transmission, and the degree to which immunity may exist in the population, which induce nonlinearities in disease spread. Disease spreads slowly at first, accelerates, and then burns out if left to its own devices. SEIR should be considered the theoretical floor for analysis, and a entire menagerie of extensions account for demography, testing, mobility, social networks, etc. 
+
+The necessity for directly including the test data generating process in models of the epidemiological data generating process can't be understated. Per-capita testing rates are so temporarily correlated with per-capita case rates they are more of a proxy of testing availability than actual cases [@kaashoekCOVID19PositiveCases2020a]. Spatially, per-capita testing rates also correlate with urbanity and co-morbids [@souchCommentaryRuralUrban2020]. How many tests are given and to who varies systematically in response to conditions on the ground with both periods of rationing and blitzes. Worse, because almost any intervention will effect both cases and testing, the treatment effect of even an exogenous intervention is not identified. Estimating an effect requires a combination of sharp constraints on some parameters and informative priors on the relationship between the number of tests and the number of cases [@kubinecRetrospectiveBayesianModel2020].
+
+Bayesian estimate of R_t @[#BayesianNowcastingAdjustment]
+
+# Evaluation and Interpretation
+
+
+
+
+Forecast Hub [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
+
+# Conclusion
+
+
+
+<!-- Null results aren't good evidence
+
+Contrarianism
+
+Uncertainty is ok
+
+Star hunting
+
+# Conclusion
+
+
+
 
 
 Depending on how closely one follows COVID-19 research, it may come as more or less of a surprise that our understanding of this pandemic is nowhere near that of the ideal. On the one hand, COVID-19 statistics are ubiquitous, over 300 new COVID-19 pre-publication papers are posted a day [@COVID19Primer], many countries have brought the spread under control, and there is race to complete trials on a number of vaccine candidates. On the other hand, there are a seemingly endless parade of reports on failures of testing, flip-flopping guidance on masks, flip-flopping guidance on mass-events, government efforts to limit or misrepresent case counts, etc. Not every country, has their spread under control, and many are just now beginning to enter their curves. These problems are just the tip of the iceberg for our issues of understanding this pandemic. Many of the things we take for granted are problematic in sometimes subtle ways.
 
 
-# Problems of Measurement
 
 Perhaps most taken for granted is that we have a clear understanding of how we got to this point, in terms of the introduction, spread, and decline of COVID-19 infections and deaths. We don't. Largely because, the institutional process of how measurements are taken, aggregated, and shared are often a larger source of variation than the actual empirical phenomenon. We have an increasingly sophisticated surveillance system, but its resolution is still too course to tell much more beyond general macro trends. Further, it started from such a low point, that most of the very important information about how the disease spread at the outset may be lost to time entirely.
 
@@ -54,9 +92,6 @@ Take the most widely reported figure, confirmed cases. As of this writing, the U
 
 
 
-More importantly, confirmed cases are just a proxy for what we really want to know, actual cases. The elephant in the COVID-19 measurement room is that the relationship between confirmed cases and actual cases depends largely on another poorly measured and poorly understood data generating process around COVID-19 testing. As with confirmed cases, initially journalistic and private efforts like the Covid-Tracking Project [@zachliptonCovidTrackingProject2020] are our main source of testing counts over time. They encountered all of the regular problems plus additional ones about what kinds tests were being reported (testing encounters, number of people tested ever, number of swabs tested, etc). These raw counts aren't generally available below the state level. ^[See [@NewCOVID19Testing2020] for a rare cross-section.] The type of test performed, and its false positive and false negative rate, is almost never included as metadata. Nor are the rules about how tests are being rationed and distributed recorded systematically.
-
-The centrality of the testing data generating process to epidemiological data generating process can't be understated. Per-capita testing rates are so temporarily correlated with per-capita case rates, case counts are more of as proxy for testing availability than actual cases, particularly in the early growth period of an outbreak [@kaashoekCOVID19PositiveCases2020a]. Spatially, per-capita testing rates also correlate with urbanity and co-morbids- we under test in places with weaker health infrastructure and worse preexisting health problems [@souchCommentaryRuralUrban2020]. Further, both how many tests are given and who gets those tests varies dynamically in response to conditions on the ground with tests rationed in peak times and reduced during good lulls. 
 
 # Problems of Inference
 
@@ -73,17 +108,12 @@ IFR should be bimodal and varies over time.
 
 
 Other efforts are focused on using novel signals 
-Early warning [@koganEarlyWarningApproach2020]
 
 COVID-19 as an instrument.
 
 Model evaluation
 
-Handling testing induced effects correctly [@kubinecRetrospectiveBayesianModel2020]
 
-Forecast Hub [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]
-
-Bayesian estimate of R_t @[#BayesianNowcastingAdjustment]
 
 Government responses "13,000 such policy announcements across more than 195 countries" [@chengCOVID19GovernmentResponse2020]
 
@@ -136,5 +166,6 @@ As political scientists, we are constantly running into data challenges as we tr
 Desperately looking for other kinds of measurements but no real ground truth
 The sensors we use to estimate infections have their own complicated data generating processes which we also don't know and can't measure well.
 
+-->
 
 # References
