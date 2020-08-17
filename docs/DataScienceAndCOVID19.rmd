@@ -18,7 +18,7 @@ bibliography: cpas_covid_19.bib
 # Some paper adjustments
 ---
 
-2550/2500 Words
+[2550/2500 words. Working draft. Comments welcome!]
 
 <!-- 
 abstract: Abstract here
