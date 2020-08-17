@@ -19,6 +19,18 @@ bibliography: cpas_covid_19.bib
 # Some paper adjustments
 ---
 
+<!--html_preserve-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175617021-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175617021-1');
+</script>
+<!--/html_preserve-->
+
 [Working draft. Comments welcome!]
 [Follow the Twitter Discussion Here](https://twitter.com/RexDouglass/status/1295391498477826053){target="_blank"}
 
