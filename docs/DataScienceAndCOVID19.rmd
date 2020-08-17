@@ -48,7 +48,7 @@ Confirmed case and death counts mechanically depend on testing, but records of t
 
 The general failure to track COVID-19 spread directly has led to a proliferation of innovative attempts to use other signals such as web searches, searches of medical databases, social media posts, fevers reported by home thermometer, and traditional flu symptom survailence networks [@koganEarlyWarningApproach2020]. While promising, proxy measures require ground truthing and regular calibration using something like regularly timed serological surveys on smaller geographic samples of the population. It is precisely the lack of such capabilities that are motivating the search for alternatives in the first place.
 
-Finally, non-pharmaceutical interventions are tracked by several academic and nonprofit teams [@haleVariationGovernmentResponses2020; @chengCOVID19GovernmentResponse2020a]. These interventions are intended to limit human mobility which is more directly measured by cell phone data which are being provided by companies like Google, Apple, SafeGraph, etc. <!--need the cite -->
+Finally, non-pharmaceutical interventions are tracked by several academic and nonprofit teams [@haleVariationGovernmentResponses2020; @chengCOVID19GovernmentResponse2020a]. These interventions are intended to limit human mobility which is more directly measured by cell phone data which are being provided by companies like Google, Apple, and SafeGraph. <!--need the cite -->
 
 # Inference
 
