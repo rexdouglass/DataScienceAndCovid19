@@ -179,4 +179,7 @@ The sensors we use to estimate infections have their own complicated data genera
 
 -->
 
+
 # References
+
+![](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Frexdouglass.github.io%2FDataScienceAndCovid19%2FDataScienceAndCOVID19.nb.html)
