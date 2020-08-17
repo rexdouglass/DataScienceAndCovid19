@@ -1,5 +1,6 @@
 ---
 title: "The Data Science of COVID-19 Spread: Some Troubling Current and Future Trends"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 author:
   - name: Rex Douglass
     email: rexdouglass@gmail.com
@@ -74,7 +75,7 @@ Perhaps the most egregious trend in recent scholarship is setting up straw man n
 
 This necessarily brief review omitted positive developments in studying COVID-19 outside of macro-observational settings. There has been remarkable progress in areas of diagnosis, clinical treatment, and phylogenetic tracking. Data science has contributed to the rapid collaboration, development, and dissemination of research in a way not seen in prior disease outbreaks. Further, our review is overly U.S. centric, with other countries like South Korea monitoring the disease so effectively they succeeded at containment without having to resort to difficult mitigation. We also neglected topics like tracing, and the acompaning contributions from the tech field such as monitoring through mobile apps and social media.
 
-Any research related to COVID-19 requires healthy caution of and respect for how little we actually know about the history of this pandemic. Practioners working on these questions and with these data will be deeply familiar with many of these concerns, but some may be especially subtle or less prominant  within one's main field of study. At a minimum, there is research being produced today which ignores much of these known methodological problems and subsequently generates confusion for novice consumers of analysis. We hope this enumeration of challenges in measurement, inference, and evaluation, can help both consumers and producers alike be part of the solution. 
+Any research related to COVID-19 requires healthy caution of and respect for how little we actually know about the history of this pandemic. Practioners working on these questions and with these data will be deeply familiar with many of these concerns, but some may be especially subtle or less prominant  within one's main field of study. At a minimum, there is research being produced today which ignores much of these known methodological problems and subsequently generates confusion for novice consumers of analysis. We hope this enumeration of challenges in measurement, inference, and interpretation, can help both consumers and producers of COVID-19 knowledge alike.
 
 <!-- Null results aren't good evidence
 
