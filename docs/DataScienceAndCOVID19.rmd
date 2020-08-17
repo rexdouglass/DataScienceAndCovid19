@@ -19,9 +19,8 @@ bibliography: cpas_covid_19.bib
 # Some paper adjustments
 ---
 
-[Follow the Twitter Discussion Here](https://twitter.com/RexDouglass/status/1295391498477826053)
-
-[2550/2500 words. Working draft. Comments welcome!]
+[Working draft. Comments welcome!]
+[Follow the Twitter Discussion Here](https://twitter.com/RexDouglass/status/1295391498477826053){target="_blank"}
 
 <!-- 
 abstract: Abstract here
