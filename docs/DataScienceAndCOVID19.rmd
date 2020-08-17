@@ -26,7 +26,7 @@ author_summary: |
 
 # Introduction
 
-The SARS-COV-2 global pandemic has exposed weaknesses throughout our institutions, and the sciences are no exception. Given the deluge of official statistics and 300+ new COVID-19 working papers posted each day^[[@COVID19Primer]], it is imperative for both consumers and producers of COVID-19 knowledge to be clear on what we do and do not know. In this brief review, we enumerate ways that data science has highlighted these weaknesses and is helping to address them.
+The SARS-COV-2 global pandemic has exposed weaknesses throughout our institutions, and the sciences are no exception. Given the deluge of official statistics and 300+ new COVID-19 working papers posted each day^[“COVID-19 Primer.” Accessed August 17, 2020. https://covid19primer.com/.], it is imperative for both consumers and producers of COVID-19 knowledge to be clear on what we do and do not know. In this brief review, we enumerate ways that data science has highlighted these weaknesses and is helping to address them.
 
 <!-- There is a growing effort to forecast how the world will differ after the COVID-19 pandemic. Unfortunately, such en effort presupposes a clarity of measurement and understanding about the COVID-19 pandemic that largely does not exist now and might never materialize. This brief note outlines ways in which the COVID-19 pandemic caught our political and scientific institutions off guard and how the literally global effort to catch up will be able to close the distance. Where possible we highlight some places for optimism, some places for improvement, and some places to level expectations. -->
 
