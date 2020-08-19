@@ -47,16 +47,15 @@ address:
 </script>
 <!--/html_preserve-->
 
-{Working draft. Comments welcome! [Follow the Twitter Discussion Here](https://twitter.com/RexDouglass/status/1295391498477826053){target="_blank"}
-
-Our thanks for the financial and intellectual support of the [Center for Peace and Security Studies](www.ucsd.cpass.edu). Author contributions: Conceptualization, R.W.D., T.L.S., and E.G.; Investigation, R.W.D.; Writing - Original Draft, R.W.D.; Writing - Review & Editing, R.W.D. and T.L.S.; Funding - E.G.}
-
+Working draft. Comments welcome! Follow the [Twitter Discussion](https://twitter.com/RexDouglass/status/1295391498477826053){target="_blank"}.
 
 <!-- 
 abstract: Abstract here
 author_summary: |
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
 -->
+
+
 
 # Introduction
 
@@ -209,6 +208,10 @@ Desperately looking for other kinds of measurements but no real ground truth
 The sensors we use to estimate infections have their own complicated data generating processes which we also don't know and can't measure well.
 
 -->
+
+Acknowledgments: Our thanks for the financial and intellectual support of the [Center for Peace and Security Studies](www.ucsd.cpass.edu). 
+
+Author contributions: Conceptualization, R.W.D., T.L.S., and E.G.; Investigation, R.W.D.; Writing - Original Draft, R.W.D.; Writing - Review & Editing, R.W.D. and T.L.S.; Funding - E.G.
 
 
 # References
