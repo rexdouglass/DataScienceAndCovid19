@@ -1,22 +1,19 @@
 ---
-title: "The Data Science of COVID-19 Spread: Some Troubling Current and Future Trends"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+title: 'The Data Science of COVID-19 Spread: Some Troubling Current and Future Trends'
 author:
-  - name: Rex Douglass
-    email: rexdouglass@gmail.com
-    affiliation: University of California, San Diego
-  - name: Thomas Leo Scherer
-    email: tlscherer@ucsd.edu
-    affiliation: University of California, San Diego
-address:
-  - code: University of California San Diego
-    address: University of California, San Diego, La Jolla,CA, 92093
-output: 
+- Rex Douglass^[University of California, San Diego, rexdouglass@gmail.com]
+- Thomas Leo Scherer^[University of California, San Diego, tlscherer@ucsd.edu]
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  pdf_document: default
   html_notebook: default
+  html_document:
+    df_print: paged
   rticles::plos_article: default
 bibliography: cpas_covid_19.bib
-
-# Some paper adjustments
+address:
+- address: University of California, San Diego, La Jolla,CA, 92093
+  code: University of California San Diego
 ---
 
 [2550/2500 words. Working draft. Comments welcome!]
