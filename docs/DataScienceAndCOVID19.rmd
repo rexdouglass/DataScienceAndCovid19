@@ -96,7 +96,7 @@ Any research related to COVID-19 requires healthy caution of and respect for how
 
 # Acknowledgments
 
-Our thanks for the financial and intellectual support of the [Center for Peace and Security Studies](www.ucsd.cpass.edu). Thank you to all who provided feedback on the early draft. 
+Our thanks the [Center for Peace and Security Studies](www.ucsd.cpass.edu) and its members, and to the Office of Naval Research [N00014-19-1-2491] and the Charles Koch Foundation for financial support. Thank you to all who provided feedback on the early draft. 
 
 Author contributions: Conceptualization, R.W.D., T.L.S., and E.G.; Investigation, R.W.D.; Writing - Original Draft, R.W.D.; Writing - Review & Editing, R.W.D. and T.L.S.; Funding - E.G.
 
