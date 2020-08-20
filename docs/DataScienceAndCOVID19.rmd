@@ -5,30 +5,20 @@ author:
     affiliation: "University of California, San Diego"
     corresponding: rexdouglass@gmail.com
     email: rexdouglass@gmail.com
-    role:
-      - Conceptualization
-      - Investigation
-      - Writing - Original Draft
-      - Writing - Review & Editing
   - name: "Thomas Leo Scherer"
     affiliation: "University of California, San Diego"
     email: tlscherer@ucsd.edu
-    role:
-      - Conceptualization
-      - Writing - Review & Editing
   - name: "Erik Gartzke"
     affiliation: "University of California, San Diego"
     email: egartzke@ucsd.edu
-    role:
-      - Conceptualization
-      - Funding
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  pdf_document: default
+  rticles::plos_article: default
+  pdf_document: 
+    keep_tex: yes
+  html_notebook: default
   html_document:
     df_print: paged
-  html_notebook: default
-  rticles::plos_article: default
 bibliography: cpas_covid_19.bib
 address:
 - address: University of California, San Diego, La Jolla,CA, 92093
@@ -51,8 +41,6 @@ Working draft. Comments welcome! Follow the [Twitter Discussion](https://twitter
 
 <!-- 
 abstract: Abstract here
-author_summary: |
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
 -->
 
 

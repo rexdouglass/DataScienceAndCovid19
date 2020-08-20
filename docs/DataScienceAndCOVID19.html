@@ -191,7 +191,7 @@ University of California, San Diego<br><a class="author_email" href="mailto:#"><
 <address class="author_afil">
 University of California, San Diego<br><a class="author_email" href="mailto:#"><a href="mailto:egartzke@ucsd.edu">egartzke@ucsd.edu</a></a>
 </address>
-<h4 class="date">19 August, 2020</h4>
+<h4 class="date">20 August, 2020</h4>
 
 </div>
 
@@ -207,17 +207,13 @@ University of California, San Diego<br><a class="author_email" href="mailto:#"><
   gtag('config', 'UA-175617021-1');
 </script>
 
-<p>{Working draft. Comments welcome! <a href="https://twitter.com/RexDouglass/status/1295391498477826053" target="_blank">Follow the Twitter Discussion Here</a></p>
-<p>Our thanks for the financial and intellectual support of the <a href="www.ucsd.cpass.edu">Center for Peace and Security Studies</a>. Author contributions: Conceptualization, R.W.D., T.L.S., and E.G.; Investigation, R.W.D.; Writing - Original Draft, R.W.D.; Writing - Review &amp; Editing, R.W.D. and T.L.S.; Funding - E.G.}</p>
+<p>Working draft. Comments welcome! Follow the <a href="https://twitter.com/RexDouglass/status/1295391498477826053" target="_blank">Twitter Discussion</a>.</p>
 <!-- 
 abstract: Abstract here
-author_summary: |
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
 -->
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>The SARS-COV-2 global pandemic has exposed weaknesses throughout our institutions, and the sciences are no exception. Given the deluge of official statistics and 300+ new COVID-19 working papers posted each day<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, it is imperative for both consumers and producers of COVID-19 knowledge to be clear on what we do and do not know. In this brief review, we enumerate ways that data science has highlighted these weaknesses and is helping to address them.</p>
-<!-- There is a growing effort to forecast how the world will differ after the COVID-19 pandemic. Unfortunately, such en effort presupposes a clarity of measurement and understanding about the COVID-19 pandemic that largely does not exist now and might never materialize. This brief note outlines ways in which the COVID-19 pandemic caught our political and scientific institutions off guard and how the literally global effort to catch up will be able to close the distance. Where possible we highlight some places for optimism, some places for improvement, and some places to level expectations. -->
 <p>In terms of understanding where we are, how we got here, and what is likely to follow, here are some things we need to know. We need to know the rate of spread of COVID-19 in a population <span class="math inline">\(R\)</span>, over time <span class="math inline">\(R_{t}\)</span>, across different political and demographic communities <span class="math inline">\(R_{ct}\)</span>, and prior to any non-pharmaceutical interventions <span class="math inline">\(R_{c0}\)</span>. We need to know how many cases of active infection exist in a community <span class="math inline">\(I_{ct}\)</span> and how many of those infections resulted in death <span class="math inline">\(D_{ct}\)</span>. We need to know the causal effect of interventions <span class="math inline">\(X_{ct}\)</span> on say rate of spread, between the observed treated populations <span class="math inline">\(R_{ct1}\)</span> and the counterfactual populations had they not been treated <span class="math inline">\(R_{ct0}\)</span>. To do so, we need some plausible causal identification strategy that allows us to account for the fact that interventions are themselves chosen and implemented in response to changes in <span class="math inline">\(R_{ct}\)</span>, and that many outside factors likely drive both <span class="math inline">\(R_{ct}\)</span> and <span class="math inline">\(X_{ct}\)</span> simultaneously. These unknowns give rise to fundamental problems of measurement, inference, and interpretation.</p>
 </div>
 <div id="measurement" class="section level1">
@@ -233,14 +229,14 @@ author_summary: |
 <div id="inference" class="section level1">
 <h1>Inference</h1>
 <p>The workhorse theoretical model for infectious disease spread is the Susceptible, Exposed, Infectious, and Removed (SEIR) compartmental model <span class="citation">(Brauer and Castillo-Chavez 2012)</span>. The intuition behind the SEIR model is that there are mechanical relationships, such as previous infections or deaths removing candidates from infection, the timing between exposure to the next possible transmission, and the degree to which immunity may exist in the population, which induce nonlinearities in disease spread. Disease spreads slowly at first, accelerates, and then burns out if left to its own devices. SEIR should be considered the theoretical floor for analysis, and a entire menagerie of extensions account for demography, testing, mobility, social networks, etc.</p>
-<p>The necessity of directly including testing in models of disease spread can't be understated. Per capita cases are so temporarily correlated with per capita testing rates they are more of a proxy of testing availability than actual cases <span class="citation">(Kaashoek and Santillana 2020)</span>. Spatially, per capita testing rates correlate with urbanity and a wide range of co-morbids <span class="citation">(Souch and Cossman 2020)</span>. How many tests are given and to who varies systematically in response to conditions on the ground with both periods of rationing and blitzes.</p>
+<p>The necessity of directly including testing in models of disease spread can't be understated. Per capita cases are so temporarily correlated with per capita testing rates they are more of a proxy of testing availability than infections <span class="citation">(Kaashoek and Santillana 2020)</span>. Spatially, per capita testing rates correlate with urbanity and a wide range of co-morbids <span class="citation">(Souch and Cossman 2020)</span>. How many tests are given and to who varies systematically in response to conditions on the ground with both periods of rationing and blitzes.</p>
 <p>Measuring the effect of interventions is difficult because they are assigned endogenously in response to both local conditions and national signals. Similarly, populations responded to both government orders and local conditions, often reducing their activity prior to being ordered to and also increasing their activity prior to being officially allowed to. Governments, the public, and the disease are all responding simultaneously to each other in often nonlinear and unobserved ways. Statistical instruments that cause government interventions but do not directly cause testing rates or rate of spread except through the government intervention are few and far between. Further, interventions are often implemented simultaneously or in a rolling cumulative pattern directly in response to changes in cases and testing results, making isolating the effect of any one treatment exceptionally difficult.</p>
 <p>Even if we had an exogenous intervention, its treatment effect on the rate of spread is still unlikely to be identified since almost any intervention will affect both cases and testing. Estimating an effect on just spread requires imposing additional assumptions, e.g. sharp constraints on some parameters and informative priors on the relationship between the number of tests and the number of cases <span class="citation">(Kubinec and Carvalho 2020)</span>.</p>
 </div>
 <div id="interpretation" class="section level1">
 <h1>Interpretation</h1>
-<p>One promising development is rigorous forecast evaluations <span class="citation">(N. G. Reich et al. 2020)</span>. <!-- COVID-19 models serve both a short term forecasting role needed for making policy decisions and also a scientific role of identifying the actual underlying data generating process. In practice, many forecasting groups have focused almost entirely on the former, constantly tweaking their model to fit recent in-sample data without transparent theoretical justification.--> Notoriously, many early simple growth models fit to the takeoff period of infections performed well right up until the curve broke and then failed entirely. A parade of predicted peaks in cases since continue the tradition, with groups celebrating success on uninteresting short-term auto-correlations while ignoring failures on actually interesting shifts in trends. All we can do is develop a very long memory of predictions and constantly hold models accountable for their long run out-of-sample performance on unseen future data.</p>
-<p>Other trends in COVID-19 work are less promising.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> An overabundance of observational work still presents correlations as evidence of causation. Without identification, correlations on short highly autocorrelated time series are as likely to be misleading as informative. The SEIR model expects a nonlinear and highly auto-correlated pattern of an increasing infection rate that then levels off independent of any interventions. An unscrupulous, or naive, analyst can easily find interventions that increased (or decreased) spread solely by where those interventions land in the natural disease cycle, completely independent of the intervention's actual effect.</p>
+<p>One promising development is rigorous forecast evaluations <span class="citation">(N. G. Reich et al. 2020)</span>. <!-- COVID-19 models serve both a short term forecasting role needed for making policy decisions and also a scientific role of identifying the actual underlying data generating process. In practice, many forecasting groups have focused almost entirely on the former, constantly tweaking their model to fit recent in-sample data without transparent theoretical justification.--> Notoriously, many early simple growth models fit to the takeoff period of infections performed well right up until the curve broke and then failed entirely. A parade of predicted peaks in cases since continue the tradition, with groups celebrating success on uninteresting short-term autocorrelations while ignoring failures on actually interesting shifts in trends. All we can do is develop a very long memory of predictions and constantly hold models accountable for their long run out-of-sample performance on unseen future data.</p>
+<p>Other trends in COVID-19 work are less promising.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> An overabundance of observational work still presents correlations as evidence of causation. Without identification, correlations on short highly autocorrelated time series are as likely to be misleading as informative. The SEIR model expects a nonlinear and highly autocorrelated pattern of an increasing infection rate that then levels off independent of any interventions. An unscrupulous, or naive, analyst can easily find interventions that increased (or decreased) spread solely by where those interventions land in the natural disease cycle, completely independent of the intervention's actual effect.</p>
 <p>Another bad habit is the pursuit of statistically distinguishable correlations over actually attempting to explain variation in COVID-19 outcomes themselves. Papers that can show a particular political party or demographic group is 'worse' on some COVID-19 dimension receive much attention. Such results lack strong explanatory power or clear policy recommendations, and so while great for making headlines, they do little to help us end the current pandemic.</p>
 <p>Perhaps the most egregious trend in recent scholarship is setting up straw man null hypothesis and then presenting the inability to reject them as positive evidence for medical and safety decisions, e.g. social distancing might not be required because a model was unable to statistically distinguish a large uptick in cases following a mass-meeting. In the best of circumstances, absence of evidence is not evidence of absence. Our underfit, undertheorized, and underperforming observational models are not the best of circumstances, and they are not sufficiently sensitive to evaluate more than macro-level general trends.</p>
 </div>
@@ -248,111 +244,11 @@ author_summary: |
 <h1>Conclusion</h1>
 <p>This necessarily brief review omitted positive developments in studying COVID-19 outside of macro-observational settings. There has been remarkable progress in areas of diagnosis, clinical treatment, and phylogenetic tracking. Data science has contributed to the rapid collaboration, development, and dissemination of research in a way not seen in prior disease outbreaks. We also neglected topics like tracing, and the accompanying contributions from the tech field such as monitoring through mobile apps and social media. Further, our review is overly U.S.-centric, with other countries like South Korea monitoring the disease so effectively they succeeded at containment without having to resort to difficult mitigation.</p>
 <p>Any research related to COVID-19 requires healthy caution of and respect for how little we actually know about the history of this pandemic. Practioners working on these questions and with these data will be deeply familiar with many of these concerns, but some may be especially subtle or less prominant within one's main field of study. At a minimum, there is research being produced today which ignores much of these known methodological problems and subsequently generates confusion for novice consumers of analysis. We hope this enumeration of challenges in measurement, inference, and interpretation, can help both consumers and producers of COVID-19 knowledge alike.</p>
-<!-- Null results aren't good evidence
-
-Contrarianism
-
-Uncertainty is ok
-
-Star hunting
-
-# Conclusion
-
-
-
-
-
-Depending on how closely one follows COVID-19 research, it may come as more or less of a surprise that our understanding of this pandemic is nowhere near that of the ideal. On the one hand, COVID-19 statistics are ubiquitous, over 300 new COVID-19 pre-publication papers are posted a day [@COVID19Primer], many countries have brought the spread under control, and there is race to complete trials on a number of vaccine candidates. On the other hand, there are a seemingly endless parade of reports on failures of testing, flip-flopping guidance on masks, flip-flopping guidance on mass-events, government efforts to limit or misrepresent case counts, etc. Not every country, has their spread under control, and many are just now beginning to enter their curves. These problems are just the tip of the iceberg for our issues of understanding this pandemic. Many of the things we take for granted are problematic in sometimes subtle ways.
-
-
-
-Perhaps most taken for granted is that we have a clear understanding of how we got to this point, in terms of the introduction, spread, and decline of COVID-19 infections and deaths. We don't. Largely because, the institutional process of how measurements are taken, aggregated, and shared are often a larger source of variation than the actual empirical phenomenon. We have an increasingly sophisticated surveillance system, but its resolution is still too course to tell much more beyond general macro trends. Further, it started from such a low point, that most of the very important information about how the disease spread at the outset may be lost to time entirely.
-
-Take the most widely reported figure, confirmed cases. As of this writing, the U.S. Centers for Disease Control reports 5.2 million cases in the United States [@cdcCoronavirusDisease20192020]. The CDC does not directly measure COVID-19 cases, it is an aggregator of reports from 60 local, state, territorial, and tribal public health authorities. These different jurisdictions do not always define cases the same way, nor are those definitions constant over time. ^[In April 14, 2020 the CDC started adding together both reports of confirmed and probable, even though some states don't report probable cases or aggregate the two.] The CDC has some ability to reach directly past states to hospitals and laboratories through the Emerging Infections Program (EIP) and the Influenza Hospitalization Surveillance Project (IHSP), but it is for a limited sample of participating locations. ^[The CARES Act in March of 2020 standardized some reporting requirements from states to the CDC, but then for unclear reasons reporting was abruptly transferred to Health and Human Services (HHS). The picture at the state level and below isn't better. States also are aggregaters from hospitals, healthcare providers, and laboratories.] Depending on their size, cities have their own additional reporting structure that rivals some states. 
-
-
-
-
-
-
-# Problems of Inference
-
-In practical terms, this means that one of the main inputs to our epidemiological models isn't fixed, it is the product of its own data generating process with both error and systematic determinants. Very few models take this into account, and at a minimum their confidence intervals should be considered a lower bound of uncertainty. That is especially true toward the early months of the pandemic when reporting was most quickly changing.
-
-
-Surveys
-
-One might want to try to use positivity rate instead of case counts, but as the case count rises, 
-
-cases and deaths
-IFR should be bimodal and varies over time.
-
-
-
-Other efforts are focused on using novel signals 
-
-COVID-19 as an instrument.
-
-Model evaluation
-
-
-
-Government responses "13,000 such policy announcements across more than 195 countries" [@chengCOVID19GovernmentResponse2020]
-
-Medical work with bad statistics
-
-Social science with sophisticated statistics but no epidemiological model
-
-Star hunting rather than explaining
-
-Little evaluation, short memories, constantly changing models and forcasts.
-
-
-# Problems of Scientific Culture
-
-Science is about being curious about the true state of the world. Intellectual curious is not just a motivation, but also an ethical guardrail against outside pressures. Too often, society rewards bad science with attention, prestige, and accolades. Bad science may be propped up in order to support preferred policies, justify profitable behavior, or simply as entertainment. COVID-19 is no exception, even though the stakes are literally life and death. To move beyond past failures, our work must be driven by intellectual curiousity. 
-
-Contrarianism
-
-Problems of contrarianism
-
-Conformity
-Similarly 
-
--Bad papers getting through
--Rough papers getting withdrawn
--General intolerance for uncertainty
-
-The insistence we have an answer undermined the political and social capital we need to fund and find ethical designs for challenge studies that can actually answer the question. The shift in public campaign strategy generates distrust of experts and conspiracy theories making it more difficult to deliver expert guidance on other issues. There are always some predictable and unpredictable second order effects from misleading people. Over representing the evidence behind masks can mislead people into thinking that masks are more important than or trade off with more effective strategies like social distancing.
-
-The dirty secret of COVID-19 modeling is that there just isn't that much unique information there. You can torture a panel dataset with a small number of units and a high auto-correlation between time units into telling you whatever you want, but that doesn't make it true.
-
-
-
-
-# Conclusion
-
-Don't be discouraged but do the reading.
-
-
-
-Comparisons across these different collection highlight major discrepancies between the series, 
-Most case counts are geographic, even though there is growing evidence of differential rates across age and race.
-
-
-
-As political scientists, we are constantly running into data challenges as we try to understand concepts and behaviors that are hard to measure. In contrast, working with COVID-19 should be relatively straight forward. Governments are routinely reporting the number of cases and deaths which we can simply merge into our datasets and include in a regression. To do so would be to propagate a lie. Before we continue with any COVID research, we must show data humility and understand what we are actually working with.
-
-
-
-Desperately looking for other kinds of measurements but no real ground truth
-The sensors we use to estimate infections have their own complicated data generating processes which we also don't know and can't measure well.
-
--->
+<p>Acknowledgments: Our thanks for the financial and intellectual support of the <a href="www.ucsd.cpass.edu">Center for Peace and Security Studies</a>.</p>
+<p>Author contributions: Conceptualization, R.W.D., T.L.S., and E.G.; Investigation, R.W.D.; Writing - Original Draft, R.W.D.; Writing - Review &amp; Editing, R.W.D. and T.L.S.; Funding - E.G.</p>
 </div>
-<div id="references" class="section level1">
+<div id="references" class="section level1 unnumbered">
 <h1>References</h1>
-<!-- <img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Frexdouglass.github.io%2FDataScienceAndCovid19%2FDataScienceAndCOVID19.nb.html" alt="Hits"> -->
 <div id="refs" class="references">
 <div id="ref-alamoCovid19OpenDataResources2020">
 <p>Alamo, Teodoro, Daniel G. Reina, Martina Mammarella, and Alberto Abella. 2020. “Covid-19: Open-Data Resources for Monitoring, Modeling, and Forecasting the Epidemic.” <em>Electronics</em> 9 (5). Multidisciplinary Digital Publishing Institute: 827. doi:<a href="https://doi.org/10.3390/electronics9050827">10.3390/electronics9050827</a>.</p>
