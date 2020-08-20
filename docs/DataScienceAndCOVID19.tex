@@ -68,7 +68,7 @@
 \title{The Data Science of COVID-19 Spread: Some Troubling Current and
 Future Trends}
 \author{true \and true \and true}
-\date{19 August, 2020}
+\date{20 August, 2020}
 
 \begin{document}
 \maketitle
@@ -76,6 +76,8 @@ Future Trends}
 Working draft. Comments welcome! Follow the
 \href{https://twitter.com/RexDouglass/status/1295391498477826053}{Twitter
 Discussion}.
+
+{[}2642/2500 words{]}
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
@@ -109,16 +111,16 @@ fundamental problems of measurement, inference, and interpretation.
 \hypertarget{measurement}{%
 \section{Measurement}\label{measurement}}
 
-There is no direct measure of \(I_{ct}\). The closest we have are
-serological estimates of Cumulative Infections \(CI_{ct}\). These are
-surveys that measure the presence of antibodies in a given population
-which is an indication of what percent have had COVID-19 at some point
-in the past, and cannot tell us how recently. They are still rarely
-available and they have false positive rates that make them
-inappropriate for populations early in their spread (Peeling et al.
-2020). Further, they require careful sampling designs comparable to
-opinion surveys, otherwise their findings may not be representative of
-the full underlying population.
+For the first several months of the pandemic and still in most countries
+now, there is no direct measure of \(I_{ct}\). Very few countries have
+implemented an ideal regularly timed national survey like the U.K.'s
+Office for National Statistics COVID-19 infection survey (Pouwels et al.
+2020). More typically, we are reliant on serological estimates of
+Cumulative Infections \(CI_{ct}\) that measure the presence of
+antibodies indicative of infection at some point in the past. These are
+still rarely available, and they have false positive rates that make
+them inappropriate for populations with low infection rates (Peeling et
+al. 2020).
 
 More commonly available are Confirmed Cases \(CC_{ct}\). COVID-19 tests
 are administered in a jurisdiction, and positive results are anonymized,
@@ -212,11 +214,11 @@ account for demography, testing, mobility, social networks, etc.
 The necessity of directly including testing in models of disease spread
 can't be understated. Per capita cases are so temporarily correlated
 with per capita testing rates they are more of a proxy of testing
-availability than actual cases (Kaashoek and Santillana 2020).
-Spatially, per capita testing rates correlate with urbanity and a wide
-range of co-morbids (Souch and Cossman 2020). How many tests are given
-and to who varies systematically in response to conditions on the ground
-with both periods of rationing and blitzes.
+availability than infections (Kaashoek and Santillana 2020). Spatially,
+per capita testing rates correlate with urbanity and a wide range of
+co-morbids (Souch and Cossman 2020). How many tests are given and to who
+varies systematically in response to conditions on the ground with both
+periods of rationing and blitzes.
 
 Measuring the effect of interventions is difficult because they are
 assigned endogenously in response to both local conditions and national
@@ -248,7 +250,7 @@ One promising development is rigorous forecast evaluations (Reich et al.
 period of infections performed well right up until the curve broke and
 then failed entirely. A parade of predicted peaks in cases since
 continue the tradition, with groups celebrating success on uninteresting
-short-term auto-correlations while ignoring failures on actually
+short-term autocorrelations while ignoring failures on actually
 interesting shifts in trends. All we can do is develop a very long
 memory of predictions and constantly hold models accountable for their
 long run out-of-sample performance on unseen future data.
@@ -260,7 +262,7 @@ overabundance of observational work still presents correlations as
 evidence of causation. Without identification, correlations on short
 highly autocorrelated time series are as likely to be misleading as
 informative. The SEIR model expects a nonlinear and highly
-auto-correlated pattern of an increasing infection rate that then levels
+autocorrelated pattern of an increasing infection rate that then levels
 off independent of any interventions. An unscrupulous, or naive, analyst
 can easily find interventions that increased (or decreased) spread
 solely by where those interventions land in the natural disease cycle,
@@ -310,8 +312,16 @@ consumers of analysis. We hope this enumeration of challenges in
 measurement, inference, and interpretation, can help both consumers and
 producers of COVID-19 knowledge alike.
 
+Acknowledgments: Our thanks for the financial and intellectual support
+of the \href{www.ucsd.cpass.edu}{Center for Peace and Security Studies}.
+
+Author contributions: Conceptualization, R.W.D., T.L.S., and E.G.;
+Investigation, R.W.D.; Writing - Original Draft, R.W.D.; Writing -
+Review \& Editing, R.W.D. and T.L.S.; Funding - E.G.
+
 \hypertarget{references}{%
-\section{References}\label{references}}
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
 
 \hypertarget{refs}{}
 \begin{cslreferences}
@@ -377,6 +387,13 @@ Boeras, Noah Fongwen, John Nkengasong, Amadou Sall, Amilcar Tanuri, and
 David L. Heymann. 2020. ``Serology Testing in the COVID-19 Pandemic
 Response.'' \emph{The Lancet Infectious Diseases} 0 (0).
 \url{https://doi.org/10.1016/S1473-3099(20)30517-X}.
+
+\leavevmode\hypertarget{ref-pouwelsCommunityPrevalenceSARSCoV22020}{}%
+Pouwels, Koen B., Thomas House, Julie V. Robotham, Paul Birrell, Andrew
+B. Gelman, Nikola Bowers, Ian Boreham, et al. 2020. ``Community
+Prevalence of SARS-CoV-2 in England: Results from the ONS Coronavirus
+Infection Survey Pilot.'' \emph{medRxiv}, July, 2020.07.06.20147348.
+\url{https://doi.org/10.1101/2020.07.06.20147348}.
 
 \leavevmode\hypertarget{ref-nicholasgreichReichlabCovid19forecasthubPrepublication2020}{}%
 Reich, Nicholas G, Jarad Niemi, Katie House, Abdul Hannan, Estee Cramer,

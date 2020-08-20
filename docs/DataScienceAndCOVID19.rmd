@@ -54,8 +54,7 @@ abstract: Abstract here
 author_summary: |
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
 -->
-
-
+[2642/2500 words]
 
 # Introduction
 
@@ -65,7 +64,7 @@ In terms of understanding where we are, how we got here, and what is likely to f
 
 # Measurement
 
-There is no direct measure of $I_{ct}$. The closest we have are serological estimates of Cumulative Infections $CI_{ct}$. These are surveys that measure the presence of antibodies in a given population which is an indication of what percent have had COVID-19 at some point in the past, and cannot tell us how recently. <!--[ANY EVIDENCE THAT ANTIBODY PRESENCE CAN FADE?]  A: Sorta. It fades in terms of immunity, but how low it can get before these tests can't detect it anymore I don't know. --> They are still rarely available and they have false positive rates that make them inappropriate for populations early in their spread [@peelingSerologyTestingCOVID192020]. Further, they require careful sampling designs comparable to opinion surveys, otherwise their findings may not be representative of the full underlying population.
+For the first several months of the pandemic and still in most countries now, there is no direct measure of $I_{ct}$. Very few countries have implemented an ideal regularly timed national survey like the U.K.'s Office for National Statistics COVID-19 infection survey [@pouwelsCommunityPrevalenceSARSCoV22020]. More typically, we are reliant on serological estimates of Cumulative Infections $CI_{ct}$ that measure the presence of antibodies indicative of infection at some point in the past. These are still rarely available, and they have false positive rates that make them inappropriate for populations with low infection rates [@peelingSerologyTestingCOVID192020].
 
 More commonly available are Confirmed Cases $CC_{ct}$. COVID-19 tests are administered in a jurisdiction, and positive results are anonymized, tabulated, reported, and aggregated by increasingly nested bureaucracies. These bureaucracies are concerned primarily with releasing legally required contemporary measurements and not maintaining consistent historical time series. This has resulted in the world's largest, most desperate scavenger hunt to scrape, transcribe, and translate counts disseminated in oral briefings, public websites, PDFs, and even static images [@alamoCovid19OpenDataResources2020]. Teams from every country are working in often uncoordinated and duplicated efforts to compile government reporting into consistent panel data; these teams include newspapers [@albertsunNewYorkTimes2020], nonprofits [@usafactsUSCoronavirusCases2020], large private companies [@chiqunzhangBingCOVID19Data2020; @ashleywolfYahooKnowledgeGraph2020], consortiums of volunteers [@yangCovidNetBringData2020; @jzohrabCOVIDAtlasLi2020; @covid19indiaorg2020tracker], and Wikipedians.
 
