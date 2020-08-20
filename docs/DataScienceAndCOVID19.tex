@@ -170,12 +170,6 @@
 \newcommand{\ipsum}{{\bf IPSUM}}
 
 
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newenvironment{cslreferences}%
-  {\setlength{\parindent}{0pt}%
-  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
-  {\par}
 
 
 
@@ -201,22 +195,17 @@
 % Title must be 250 characters or less.
 \begin{flushleft}
 {\Large
-\textbf\newline{The Data Science of COVID-19 Spread: Some Troubling
-Current and Future
+\textbf\newline{The Data Science of COVID-19 Spread: Some Troubling Current and Future
 Trends} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
 }
 \newline
 % Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
 \\
-Rex Douglass\textsuperscript{\getAff{University of California, San
-Diego}}\textsuperscript{*},
-Thomas Leo Scherer\textsuperscript{\getAff{University of California, San
-Diego}},
-Erik Gartzke\textsuperscript{\getAff{University of California, San
-Diego}}\\
+Rex Douglass\textsuperscript{\getAff{University of California, San Diego}}\textsuperscript{*},
+Thomas Leo Scherer\textsuperscript{\getAff{University of California, San Diego}},
+Erik Gartzke\textsuperscript{\getAff{University of California, San Diego}}\\
 \bigskip
-\textbf{\getAff{University of California San Diego}}University of
-California, San Diego, La Jolla,CA, 92093\\
+\textbf{\getAff{University of California San Diego}}University of California, San Diego, La Jolla,CA, 92093\\
 \bigskip
 * Corresponding author: rexdouglass@gmail.com\\
 \end{flushleft}
@@ -229,14 +218,7 @@ California, San Diego, La Jolla,CA, 92093\\
 \linenumbers
 
 % Use "Eq" instead of "Equation" for equation citations.
-Working draft. Comments welcome! Follow the
-\href{https://twitter.com/RexDouglass/status/1295391498477826053}{Twitter
-Discussion}.
-
-{[}2642/2500 words{]}
-
-\hypertarget{introduction}{%
-\section{Introduction}\label{introduction}}
+\section{Introduction}\label{introduction}
 
 The SARS-COV-2 global pandemic has exposed weaknesses throughout our
 institutions, and the sciences are no exception. Given the deluge of
@@ -264,8 +246,7 @@ changes in \(R_{ct}\), and that many outside factors likely drive both
 \(R_{ct}\) and \(X_{ct}\) simultaneously. These unknowns give rise to
 fundamental problems of measurement, inference, and interpretation.
 
-\hypertarget{measurement}{%
-\section{Measurement}\label{measurement}}
+\section{Measurement}\label{measurement}
 
 For the first several months of the pandemic and still in most countries
 now, there is no direct measure of \(I_{ct}\). Very few countries have
@@ -289,10 +270,10 @@ translate counts disseminated in oral briefings, public websites, PDFs,
 and even static images (Alamo et al. 2020). Teams from every country are
 working in often uncoordinated and duplicated efforts to compile
 government reporting into consistent panel data; these teams include
-newspapers (Sun et al. 2020), nonprofits (USAFacts 2020), large private
-companies (Zhang, Donthini, and Source 2020; Wolf, Ary, and Firooz
-2020), consortiums of volunteers (Yang et al. 2020; Zohrab et al. 2020;
-Group 2020), and Wikipedians.
+newspapers (A. Sun et al. 2020), nonprofits (USAFacts 2020), large
+private companies (C. Zhang, Donthini, and Source 2020; Wolf, Ary, and
+Firooz 2020), consortiums of volunteers (Yang et al. 2020; Zohrab et al.
+2020; Group 2020), and Wikipedians.
 
 The resulting ecosystem of panel datasets vary in spatial and temporal
 coverage, have little metadata about sources or changing definitions,
@@ -300,7 +281,7 @@ and generally do not handle revisions to past counts from reporting
 sources. Direct comparisons between sources reveal worrying
 disagreements and temporal artifacts like reporting delays,
 seasonalities, discontinuities, and sudden revisions in counts both
-upwards and downwards (Wang et al. 2020). It is not obvious how to
+upwards and downwards (G. Wang et al. 2020). It is not obvious how to
 correctly account for these problems or adjudicate between conflicting
 sources without a clear ground truth. There also is no permanent archive
 of the raw source material meaning reconstructing the full chain of
@@ -352,8 +333,7 @@ These interventions are intended to limit human mobility which is more
 directly measured by cell phone data which are being provided by
 companies like Google, Apple, and SafeGraph.
 
-\hypertarget{inference}{%
-\section{Inference}\label{inference}}
+\section{Inference}\label{inference}
 
 The workhorse theoretical model for infectious disease spread is the
 Susceptible, Exposed, Infectious, and Removed (SEIR) compartmental model
@@ -398,18 +378,17 @@ constraints on some parameters and informative priors on the
 relationship between the number of tests and the number of cases
 (Kubinec and Carvalho 2020).
 
-\hypertarget{interpretation}{%
-\section{Interpretation}\label{interpretation}}
+\section{Interpretation}\label{interpretation}
 
-One promising development is rigorous forecast evaluations (Reich et al.
-2020). Notoriously, many early simple growth models fit to the takeoff
-period of infections performed well right up until the curve broke and
-then failed entirely. A parade of predicted peaks in cases since
-continue the tradition, with groups celebrating success on uninteresting
-short-term autocorrelations while ignoring failures on actually
-interesting shifts in trends. All we can do is develop a very long
-memory of predictions and constantly hold models accountable for their
-long run out-of-sample performance on unseen future data.
+One promising development is rigorous forecast evaluations (N. G. Reich
+et al. 2020). Notoriously, many early simple growth models fit to the
+takeoff period of infections performed well right up until the curve
+broke and then failed entirely. A parade of predicted peaks in cases
+since continue the tradition, with groups celebrating success on
+uninteresting short-term autocorrelations while ignoring failures on
+actually interesting shifts in trends. All we can do is develop a very
+long memory of predictions and constantly hold models accountable for
+their long run out-of-sample performance on unseen future data.
 
 Other trends in COVID-19 work are less promising.\footnote{We omit
   citations falling under the criticisms provided below as they are
@@ -442,8 +421,7 @@ evidence of absence. Our underfit, undertheorized, and underperforming
 observational models are not the best of circumstances, and they are not
 sufficiently sensitive to evaluate more than macro-level general trends.
 
-\hypertarget{conclusion}{%
-\section{Conclusion}\label{conclusion}}
+\section{Conclusion}\label{conclusion}
 
 This necessarily brief review omitted positive developments in studying
 COVID-19 outside of macro-observational settings. There has been
@@ -468,148 +446,157 @@ consumers of analysis. We hope this enumeration of challenges in
 measurement, inference, and interpretation, can help both consumers and
 producers of COVID-19 knowledge alike.
 
-Acknowledgments: Our thanks for the financial and intellectual support
-of the \href{www.ucsd.cpass.edu}{Center for Peace and Security Studies}.
+\section{Acknowledgments}\label{acknowledgments}
+
+Our thanks for the financial and intellectual support of the
+\href{www.ucsd.cpass.edu}{Center for Peace and Security Studies}.
 
 Author contributions: Conceptualization, R.W.D., T.L.S., and E.G.;
 Investigation, R.W.D.; Writing - Original Draft, R.W.D.; Writing -
 Review \& Editing, R.W.D. and T.L.S.; Funding - E.G.
 
-\hypertarget{references}{%
-\section*{References}\label{references}}
+\section*{References}\label{references}
 \addcontentsline{toc}{section}{References}
 
 \hypertarget{refs}{}
-\begin{cslreferences}
-\leavevmode\hypertarget{ref-alamoCovid19OpenDataResources2020}{}%
+\hypertarget{ref-alamoCovid19OpenDataResources2020}{}
 Alamo, Teodoro, Daniel G. Reina, Martina Mammarella, and Alberto Abella.
 2020. ``Covid-19: Open-Data Resources for Monitoring, Modeling, and
-Forecasting the Epidemic.'' \emph{Electronics} 9 (5): 827.
-\url{https://doi.org/10.3390/electronics9050827}.
+Forecasting the Epidemic.'' \emph{Electronics} 9 (5). Multidisciplinary
+Digital Publishing Institute: 827.
+doi:\href{https://doi.org/10.3390/electronics9050827}{10.3390/electronics9050827}.
 
-\leavevmode\hypertarget{ref-brauerMathematicalModelsPopulation2012}{}%
+\hypertarget{ref-brauerMathematicalModelsPopulation2012}{}
 Brauer, Fred, and Carlos Castillo-Chavez. 2012. \emph{Mathematical
 Models in Population Biology and Epidemiology}. Vol. 2. Springer.
 
-\leavevmode\hypertarget{ref-chengCOVID19GovernmentResponse2020a}{}%
+\hypertarget{ref-chengCOVID19GovernmentResponse2020a}{}
 Cheng, Cindy, Joan Barceló, Allison Spencer Hartnett, Robert Kubinec,
 and Luca Messerschmidt. 2020. ``COVID-19 Government Response Event
-Dataset (CoronaNet V.1.0).'' \emph{Nature Human Behaviour} 4 (7):
-756--68. \url{https://doi.org/10.1038/s41562-020-0909-7}.
+Dataset (CoronaNet V.1.0).'' \emph{Nature Human Behaviour} 4 (7). Nature
+Publishing Group: 756--68.
+doi:\href{https://doi.org/10.1038/s41562-020-0909-7}{10.1038/s41562-020-0909-7}.
 
-\leavevmode\hypertarget{ref-covid19indiaorg2020tracker}{}%
+\hypertarget{ref-covid19indiaorg2020tracker}{}
 Group, COVID-19 India Org Data Operations. 2020. ``Dataset for Tracking
-COVID-19 Spread in India.''
+COVID-19 Spread in India.'' Accessed on yyyy-mm-dd from
+https://api.covid19india.org/.
 
-\leavevmode\hypertarget{ref-haleVariationGovernmentResponses2020}{}%
+\hypertarget{ref-haleVariationGovernmentResponses2020}{}
 Hale, Thomas, Anna Petherick, Toby Phillips, and Samuel Webster. 2020.
 ``Variation in Government Responses to COVID-19.'' \emph{Blavatnik
 School of Government Working Paper} 31.
 
-\leavevmode\hypertarget{ref-kaashoekCOVID19PositiveCases2020a}{}%
+\hypertarget{ref-kaashoekCOVID19PositiveCases2020a}{}
 Kaashoek, Justin, and Mauricio Santillana. 2020. ``COVID-19 Positive
 Cases, Evidence on the Time Evolution of the Epidemic or an Indicator of
 Local Testing Capabilities? A Case Study in the United States.'' SSRN
 Scholarly Paper ID 3574849. Rochester, NY: Social Science Research
-Network. \url{https://doi.org/10.2139/ssrn.3574849}.
+Network.
+doi:\href{https://doi.org/10.2139/ssrn.3574849}{10.2139/ssrn.3574849}.
 
-\leavevmode\hypertarget{ref-koganEarlyWarningApproach2020}{}%
+\hypertarget{ref-koganEarlyWarningApproach2020}{}
 Kogan, Nicole E., Leonardo Clemente, Parker Liautaud, Justin Kaashoek,
 Nicholas B. Link, Andre T. Nguyen, Fred S. Lu, et al. 2020. ``An Early
 Warning Approach to Monitor COVID-19 Activity with Multiple Digital
 Traces in Near Real-Time.'' \emph{arXiv:2007.00756 {[}Q-Bio, Stat{]}},
 July. \url{http://arxiv.org/abs/2007.00756}.
 
-\leavevmode\hypertarget{ref-kubinecRetrospectiveBayesianModel2020}{}%
+\hypertarget{ref-kubinecRetrospectiveBayesianModel2020}{}
 Kubinec, Robert, and Luiz Carvalho. 2020. ``A Retrospective Bayesian
 Model for Measuring Covariate Effects on Observed COVID-19 Test and Case
-Counts,'' April. \url{https://doi.org/10.31235/osf.io/jp4wk}.
+Counts,'' April. SocArXiv.
+doi:\href{https://doi.org/10.31235/osf.io/jp4wk}{10.31235/osf.io/jp4wk}.
 
-\leavevmode\hypertarget{ref-zachliptonCovidTrackingProject2020}{}%
+\hypertarget{ref-zachliptonCovidTrackingProject2020}{}
 Lipton, Zach, Josh Ellington, smike, James Ouyang, Ken Riley, Joshua
 Ellinger, Jeff Hammerbacher, Olivier Lacan, Jason Crane, and
 space-buzzer. 2020. ``The Covid-Tracking Project.'' Zenodo.
-\url{https://doi.org/10.5281/zenodo.3981599}.
+doi:\href{https://doi.org/10.5281/zenodo.3981599}{10.5281/zenodo.3981599}.
 
-\leavevmode\hypertarget{ref-meyerowitz-katzSystematicReviewMetaanalysis2020}{}%
+\hypertarget{ref-meyerowitz-katzSystematicReviewMetaanalysis2020}{}
 Meyerowitz-Katz, Gideon, and Lea Merone. 2020. ``A Systematic Review and
 Meta-Analysis of Published Research Data on COVID-19 Infection-Fatality
-Rates.'' \emph{medRxiv}, May, 2020.05.03.20089854.
-\url{https://doi.org/10.1101/2020.05.03.20089854}.
+Rates.'' \emph{medRxiv}, May. Cold Spring Harbor Laboratory Press,
+2020.05.03.20089854.
+doi:\href{https://doi.org/10.1101/2020.05.03.20089854}{10.1101/2020.05.03.20089854}.
 
-\leavevmode\hypertarget{ref-peelingSerologyTestingCOVID192020}{}%
+\hypertarget{ref-peelingSerologyTestingCOVID192020}{}
 Peeling, Rosanna W., Catherine J. Wedderburn, Patricia J. Garcia, Debrah
 Boeras, Noah Fongwen, John Nkengasong, Amadou Sall, Amilcar Tanuri, and
 David L. Heymann. 2020. ``Serology Testing in the COVID-19 Pandemic
-Response.'' \emph{The Lancet Infectious Diseases} 0 (0).
-\url{https://doi.org/10.1016/S1473-3099(20)30517-X}.
+Response.'' \emph{The Lancet Infectious Diseases} 0 (0). Elsevier.
+doi:\href{https://doi.org/10.1016/S1473-3099(20)30517-X}{10.1016/S1473-3099(20)30517-X}.
 
-\leavevmode\hypertarget{ref-pouwelsCommunityPrevalenceSARSCoV22020}{}%
+\hypertarget{ref-pouwelsCommunityPrevalenceSARSCoV22020}{}
 Pouwels, Koen B., Thomas House, Julie V. Robotham, Paul Birrell, Andrew
 B. Gelman, Nikola Bowers, Ian Boreham, et al. 2020. ``Community
 Prevalence of SARS-CoV-2 in England: Results from the ONS Coronavirus
-Infection Survey Pilot.'' \emph{medRxiv}, July, 2020.07.06.20147348.
-\url{https://doi.org/10.1101/2020.07.06.20147348}.
+Infection Survey Pilot.'' \emph{medRxiv}, July. Cold Spring Harbor
+Laboratory Press, 2020.07.06.20147348.
+doi:\href{https://doi.org/10.1101/2020.07.06.20147348}{10.1101/2020.07.06.20147348}.
 
-\leavevmode\hypertarget{ref-nicholasgreichReichlabCovid19forecasthubPrepublication2020}{}%
+\hypertarget{ref-nicholasgreichReichlabCovid19forecasthubPrepublication2020}{}
 Reich, Nicholas G, Jarad Niemi, Katie House, Abdul Hannan, Estee Cramer,
 Steve Horstman, Shanghong Xie, et al. 2020.
 ``Reichlab/Covid19-Forecast-Hub: Pre-Publication Snapshot.'' Zenodo.
-\url{https://doi.org/10.5281/zenodo.3963372}.
+doi:\href{https://doi.org/10.5281/zenodo.3963372}{10.5281/zenodo.3963372}.
 
-\leavevmode\hypertarget{ref-souchCommentaryRuralUrban2020}{}%
+\hypertarget{ref-souchCommentaryRuralUrban2020}{}
 Souch, Jacob M., and Jeralynn S. Cossman. 2020. ``A Commentary on
 Rural-Urban Disparities in COVID-19 Testing Rates Per 100,000 and Risk
 Factors.'' \emph{The Journal of Rural Health}, June, jrh.12450.
-\url{https://doi.org/10.1111/jrh.12450}.
+doi:\href{https://doi.org/10.1111/jrh.12450}{10.1111/jrh.12450}.
 
-\leavevmode\hypertarget{ref-albertsunNewYorkTimes2020}{}%
+\hypertarget{ref-albertsunNewYorkTimes2020}{}
 Sun, Albert, Tiff Fehr, Archie Tse, Rachel, and Wilson Andrews. 2020.
 ``New York Times Coronavirus (Covid-19) Data in the United States.''
-Zenodo. \url{https://doi.org/10.5281/zenodo.3981451}.
+Zenodo.
+doi:\href{https://doi.org/10.5281/zenodo.3981451}{10.5281/zenodo.3981451}.
 
-\leavevmode\hypertarget{ref-usafactsUSCoronavirusCases2020}{}%
+\hypertarget{ref-usafactsUSCoronavirusCases2020}{}
 USAFacts. 2020. ``US Coronavirus Cases and Deaths.'' Zenodo.
-\url{https://doi.org/10.5281/zenodo.3981486}.
+doi:\href{https://doi.org/10.5281/zenodo.3981486}{10.5281/zenodo.3981486}.
 
-\leavevmode\hypertarget{ref-wangComparingIntegratingUS2020}{}%
+\hypertarget{ref-wangComparingIntegratingUS2020}{}
 Wang, Guannan, Zhiling Gu, Xinyi Li, Shan Yu, Myungjin Kim, Yueying
 Wang, Lei Gao, and Li Wang. 2020. ``Comparing and Integrating US
 COVID-19 Daily Data from Multiple Sources: A County-Level Dataset with
 Local Characteristics.'' \emph{arXiv:2006.01333 {[}Stat{]}}, June.
 \url{http://arxiv.org/abs/2006.01333}.
 
-\leavevmode\hypertarget{ref-weinbergerEstimationExcessDeaths2020}{}%
+\hypertarget{ref-weinbergerEstimationExcessDeaths2020}{}
 Weinberger, Daniel M., Jenny Chen, Ted Cohen, Forrest W. Crawford,
 Farzad Mostashari, Don Olson, Virginia E. Pitzer, et al. 2020.
 ``Estimation of Excess Deaths Associated with the COVID-19 Pandemic in
 the United States, March to May 2020.'' \emph{JAMA Internal Medicine},
-July. \url{https://doi.org/10.1001/jamainternmed.2020.3391}.
+July.
+doi:\href{https://doi.org/10.1001/jamainternmed.2020.3391}{10.1001/jamainternmed.2020.3391}.
 
-\leavevmode\hypertarget{ref-ashleywolfYahooKnowledgeGraph2020}{}%
+\hypertarget{ref-ashleywolfYahooKnowledgeGraph2020}{}
 Wolf, Ashley, Asaf Ary, and Hossein Firooz. 2020. ``Yahoo Knowledge
 Graph COVID-19 Datasets.'' Zenodo.
-\url{https://doi.org/10.5281/zenodo.3981432}.
+doi:\href{https://doi.org/10.5281/zenodo.3981432}{10.5281/zenodo.3981432}.
 
-\leavevmode\hypertarget{ref-yangCovidNetBringData2020}{}%
+\hypertarget{ref-yangCovidNetBringData2020}{}
 Yang, Tong, Kai Shen, Sixuan He, Enyu Li, Peter Sun, Pingying Chen, Lin
 Zuo, et al. 2020. ``CovidNet: To Bring Data Transparency in the Era of
 COVID-19.'' \emph{arXiv:2005.10948 {[}Cs, Q-Bio{]}}, July.
 \url{http://arxiv.org/abs/2005.10948}.
 
-\leavevmode\hypertarget{ref-chiqunzhangBingCOVID19Data2020}{}%
+\hypertarget{ref-chiqunzhangBingCOVID19Data2020}{}
 Zhang, Chiqun, Chaitanya Donthini, and Microsoft Open Source. 2020.
 ``Bing-COVID-19-Data.'' Zenodo.
-\url{https://doi.org/10.5281/zenodo.3978733}.
+doi:\href{https://doi.org/10.5281/zenodo.3978733}{10.5281/zenodo.3978733}.
 
-\leavevmode\hypertarget{ref-jzohrabCOVIDAtlasLi2020}{}%
-Zohrab, J, Ryan Block, Cameron Chamberlain, Larry Davis, Minh Nguyeñ̂,
+\hypertarget{ref-jzohrabCOVIDAtlasLi2020}{}
+Zohrab, J, Ryan Block, Cameron Chamberlain, Larry Davis, Minh Nguyeñ,
 Alastair Gifillan, Adam Hughes, BriceWolfgang, and andys1376. 2020.
 ``COVID Atlas Li.'' Zenodo.
-\url{https://doi.org/10.5281/zenodo.3981563}.
-\end{cslreferences}
+doi:\href{https://doi.org/10.5281/zenodo.3981563}{10.5281/zenodo.3981563}.
 
 \nolinenumbers
 
 
 \end{document}
+
