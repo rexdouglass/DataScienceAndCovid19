@@ -1,0 +1,105 @@
+---
+title: 'The Data Science of COVID-19 Spread: Some Troubling Current and Future Trends'
+author:
+  - name: "Rex Douglass"
+    affiliation: "University of California, San Diego"
+    corresponding: rexdouglass@gmail.com
+    email: rexdouglass@gmail.com
+  - name: "Thomas Leo Scherer"
+    affiliation: "University of California, San Diego"
+    email: tlscherer@ucsd.edu
+  - name: "Erik Gartzke"
+    affiliation: "University of California, San Diego"
+    email: egartzke@ucsd.edu
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rticles::plos_article: default
+  pdf_document: 
+    keep_tex: yes
+  html_notebook: default
+  html_document:
+    df_print: paged
+bibliography: cpas_covid_19.bib
+address:
+- address: University of California, San Diego, La Jolla,CA, 92093
+  code: University of California San Diego
+---
+
+<!--html_preserve-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175617021-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175617021-1');
+</script>
+<!--/html_preserve-->
+
+<!-- Working draft. Comments welcome! Follow the [Twitter Discussion](https://twitter.com/RexDouglass/status/1295391498477826053){target="_blank"}. 
+
+[2642/2500 words]
+-->
+
+<!-- 
+abstract: Abstract here
+-->
+
+# Introduction
+
+The SARS-COV-2 global pandemic has exposed weaknesses throughout our institutions, and the sciences are no exception. Given the deluge of official statistics and 300+ new COVID-19 working papers posted each day^[“COVID-19 Primer.” Accessed August 17, 2020. https://covid19primer.com/.], it is imperative for both consumers and producers of COVID-19 knowledge to be clear on what we do and do not know. In this brief review, we enumerate ways that data science has highlighted these weaknesses and is helping to address them.
+
+In terms of understanding where we are, how we got here, and what is likely to follow, here are some things we need to know. We need to know the rate of spread of COVID-19 in a population $R$, over time $R_{t}$, across different political and demographic communities $R_{ct}$, and prior to any non-pharmaceutical interventions $R_{c0}$. We need to know how many cases of active infection exist in a community $I_{ct}$ and how many of those infections resulted in death $D_{ct}$. We need to know the causal effect of interventions $X_{ct}$ on say rate of spread, between the observed treated populations $R_{ct1}$ and the counterfactual populations had they not been treated $R_{ct0}$. To do so, we need some plausible causal identification strategy that allows us to account for the fact that interventions are themselves chosen and implemented in response to changes in $R_{ct}$, and that many outside factors likely drive both $R_{ct}$ and $X_{ct}$ simultaneously. These unknowns give rise to fundamental problems of measurement, inference, and interpretation.
+
+# Measurement
+
+For the first several months of the pandemic and still in most countries now, there is no direct measure of $I_{ct}$. Very few countries have implemented an ideal regularly timed national survey like the U.K.'s Office for National Statistics COVID-19 infection survey [@pouwelsCommunityPrevalenceSARSCoV22020]. More typically, we are reliant on serological estimates of Cumulative Infections $CI_{ct}$ that measure the presence of antibodies indicative of infection at some point in the past. These are also still rare, and they have false positive rates that make them inappropriate for populations with low infection rates [@peelingSerologyTestingCOVID192020].
+
+More commonly available are Confirmed Cases $CC_{ct}$. COVID-19 tests are administered in a jurisdiction, and positive results are anonymized, tabulated, reported, and aggregated by increasingly nested bureaucracies. These bureaucracies are concerned primarily with releasing legally required contemporary measurements and not maintaining consistent historical time series. This has resulted in the world's largest, most desperate scavenger hunt to scrape, transcribe, and translate counts disseminated in oral briefings, public websites, PDFs, and even static images [@alamoCovid19OpenDataResources2020]. Teams from every country are working in often uncoordinated and duplicated efforts to compile government reporting into consistent panel data; these teams include newspapers [@albertsunNewYorkTimes2020], nonprofits [@usafactsUSCoronavirusCases2020], large private companies [@chiqunzhangBingCOVID19Data2020; @ashleywolfYahooKnowledgeGraph2020], consortiums of volunteers [@yangCovidNetBringData2020; @jzohrabCOVIDAtlasLi2020; @covid19indiaorg2020tracker], and Wikipedians.
+
+The resulting ecosystem of panel datasets vary in spatial and temporal coverage, have little metadata about sources or changing definitions, and generally do not handle revisions to past counts from reporting sources. Direct comparisons between sources reveal worrying disagreements and temporal artifacts like reporting delays, seasonalities, discontinuities, and sudden revisions in counts both upwards and downwards [@wangComparingIntegratingUS2020]. It is not obvious how to correctly account for these problems or adjudicate between conflicting sources without a clear ground truth. There also is no permanent archive of the raw source material meaning reconstructing the full chain of evidence may no longer be possible. 
+
+Likewise, we do not have direct measures of Deaths $D_{ct}$ but only Confirmed Deaths $CD_{ct}$. $CD_{ct}$ suffers from all of the problems of Confirmed Cases $CC_{ct}$ except for possibly less under-reporting depending on if the person died at home or in medical care. Choosing $CD_{ct}$ as the lesser of two evils, many projects attempt to take plausible values of the Infected Fatality Rate $IFR=D/I$ to back out an estimation for $I_{ct}$ [@meyerowitz-katzSystematicReviewMetaanalysis2020]. Others have turned to estimating Excess Deaths $ED_{ct}$, which is a number proportional to the number of total deaths reported in an area above what would be expected given the number of deaths reported in previous years [@weinbergerEstimationExcessDeaths2020]. $ED_{ct}$ is also not a direct estimate of $D_{ct}$ as it can include deaths that were not caused by COVID-19 directly, e.g. other health conditions that received inadequate care during this period, and similarly can undercount the number of COVID-19 caused deaths as lockdowns reduce mobility and economic activity that might typically lead to deaths, e.g. car accidents.
+
+Confirmed case and death counts mechanically depend on testing, but records of tests administered $T_{ct}$ are even worse. In the U.S., much of what we know about trends in testing patterns come from journalistic efforts like the Covid-Tracking Project [@zachliptonCovidTrackingProject2020]. They encountered all of the regular problems plus additional ones specific to ambiguity to what kind of test count is being reported (testing encounters, number of people tested, number of swabs tested, etc). The type of test performed (and its false positive and false negative rate) is almost never included as metadata. Nor are the rules about how tests are being rationed and distributed being recorded systematically.
+
+The general failure to track COVID-19 spread directly has led to a proliferation of innovative attempts to use other signals such as web searches, searches of medical databases, social media posts, fevers reported by home thermometer, and traditional flu symptom survailence networks [@koganEarlyWarningApproach2020]. While promising, proxy measures require ground truthing and regular calibration using something like regularly timed serological surveys on smaller geographic samples of the population. It is precisely the lack of such capabilities that are motivating the search for alternatives in the first place.
+
+Finally, non-pharmaceutical interventions are tracked by several academic and nonprofit teams [@haleVariationGovernmentResponses2020; @chengCOVID19GovernmentResponse2020a]. These interventions are intended to limit human mobility which is more directly measured by cell phone data which are being provided by companies like Google, Apple, and SafeGraph. <!--need the cite -->
+
+# Inference
+
+The workhorse theoretical model for infectious disease spread is the Susceptible, Exposed, Infectious, and Removed (SEIR) compartmental model [@brauerMathematicalModelsPopulation2012]. The intuition behind the SEIR model is that there are mechanical relationships, such as previous infections or deaths removing candidates from infection, the timing between exposure to the next possible transmission, and the degree to which immunity may exist in the population, which induce nonlinearities in disease spread. Disease spreads slowly at first, accelerates, and then burns out if left to its own devices. SEIR should be considered the theoretical floor for analysis, and an entire menagerie of extensions account for demography, testing, mobility, social networks, etc. 
+
+The necessity of directly including testing in models of disease spread can't be understated. Per capita cases are so temporarily correlated with per capita testing rates they are more of a proxy of testing availability than infections [@kaashoekCOVID19PositiveCases2020a]. Spatially, per capita testing rates correlate with urbanity and a wide range of co-morbids [@souchCommentaryRuralUrban2020]. How many tests are given and to who varies systematically in response to conditions on the ground with both periods of rationing and blitzes.
+
+Measuring the effect of interventions is difficult because they are assigned endogenously in response to both local conditions and national signals. Similarly,  populations responded to both government orders and local conditions, often reducing their activity prior to being ordered to and also increasing their activity prior to being officially allowed to. Governments, the public, and the disease are all responding simultaneously to each other in often nonlinear and unobserved ways. Statistical instruments that cause government interventions but do not directly cause testing rates or rate of spread except through the government intervention are few and far between. Further, interventions are often implemented simultaneously or in a rolling cumulative pattern directly in response to changes in cases and testing results, making isolating the effect of any one treatment exceptionally difficult. 
+
+Even if we had an exogenous intervention, its treatment effect on the rate of spread is still unlikely to be identified since almost any intervention will affect both cases and testing. Estimating an effect on just spread requires imposing additional assumptions, e.g. sharp constraints on some parameters and informative priors on the relationship between the number of tests and the number of cases [@kubinecRetrospectiveBayesianModel2020].
+
+# Interpretation
+
+One promising development is rigorous forecast evaluations [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]. <!-- COVID-19 models serve both a short term forecasting role needed for making policy decisions and also a scientific role of identifying the actual underlying data generating process. In practice, many forecasting groups have focused almost entirely on the former, constantly tweaking their model to fit recent in-sample data without transparent theoretical justification.--> Notoriously, many early simple growth models fit to the takeoff period of infections performed well right up until the curve broke and then failed entirely. A parade of predicted peaks in cases since continue the tradition, with groups celebrating success on uninteresting short-term autocorrelations while ignoring failures on actually interesting shifts in trends. All we can do is develop a very long memory of predictions and constantly hold models accountable for their long run out-of-sample performance on unseen future data.
+
+Other trends in COVID-19 work are less promising.^[We omit citations falling under the criticisms provided below as they are working papers and likely to change before finalization.] An overabundance of observational work still presents correlations as evidence of causation. Without identification, correlations on short highly autocorrelated time series are as likely to be misleading as informative. The SEIR model expects a nonlinear and highly autocorrelated pattern of an increasing infection rate that then levels off independent of any interventions. An unscrupulous, or naive, analyst can easily find interventions that increased (or decreased) spread solely by where those interventions land in the natural disease cycle, completely independent of the intervention's actual effect. 
+
+Another bad habit is the pursuit of statistically distinguishable correlations over actually attempting to explain variation in COVID-19 outcomes themselves. Papers that can show a particular political party or demographic group is 'worse' on some COVID-19 dimension receive much attention. Such results lack strong explanatory power or clear policy recommendations, and so while great for making headlines, they do little to help us end the current pandemic.
+
+Perhaps the most egregious trend in recent scholarship is setting up straw man null hypothesis and then presenting the inability to reject them as positive evidence for medical and safety decisions, e.g. social distancing might not be required because a model was unable to statistically distinguish a large uptick in cases following a mass-meeting. In the best of circumstances, absence of evidence is not evidence of absence. Our underfit, undertheorized, and underperforming observational models are not the best of circumstances, and they are not sufficiently sensitive to evaluate more than macro-level general trends.
+
+# Conclusion
+
+This necessarily brief review omitted positive developments in studying COVID-19 outside of macro-observational settings. There has been remarkable progress in areas of diagnosis, clinical treatment, and phylogenetic tracking. Data science has contributed to the rapid collaboration, development, and dissemination of research in a way not seen in prior disease outbreaks. We also neglected topics like tracing, and the accompanying contributions from the tech field such as monitoring through mobile apps and social media.   Further, our review is overly U.S.-centric, with other countries like South Korea monitoring the disease so effectively they succeeded at containment without having to resort to difficult mitigation.
+
+Any research related to COVID-19 requires healthy caution of and respect for how little we actually know about the history of this pandemic. Practioners working on these questions and with these data will be deeply familiar with many of these concerns, but some may be especially subtle or less prominant  within one's main field of study. At a minimum, there is research being produced today which ignores much of these known methodological problems and subsequently generates confusion for novice consumers of analysis. We hope this enumeration of challenges in measurement, inference, and interpretation, can help both consumers and producers of COVID-19 knowledge alike.
+
+# Acknowledgments
+
+Our thanks the [Center for Peace and Security Studies](www.ucsd.cpass.edu) and its members, and to the Office of Naval Research [N00014-19-1-2491] and the Charles Koch Foundation for financial support. Thank you to all who provided feedback on the early draft. 
+
+Author contributions: Conceptualization, R.W.D., T.L.S., and E.G.; Investigation, R.W.D.; Writing - Original Draft, R.W.D.; Writing - Review & Editing, R.W.D. and T.L.S.; Funding - E.G.
+
+
+# References
+
