@@ -170,6 +170,12 @@
 \newcommand{\ipsum}{{\bf IPSUM}}
 
 
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+  {\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
+  {\par}
 
 \usepackage{soul}
 
@@ -196,17 +202,22 @@
 % Title must be 250 characters or less.
 \begin{flushleft}
 {\Large
-\textbf\newline{The Data Science of COVID-19 Spread: Some Troubling Current and Future
+\textbf\newline{The Data Science of COVID-19 Spread: Some Troubling
+Current and Future
 Trends} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
 }
 \newline
 % Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
 \\
-Rex Douglass\textsuperscript{\getAff{University of California, San Diego}}\textsuperscript{*},
-Thomas Leo Scherer\textsuperscript{\getAff{University of California, San Diego}},
-Erik Gartzke\textsuperscript{\getAff{University of California, San Diego}}\\
+Rex Douglass\textsuperscript{\getAff{University of California, San
+Diego}}\textsuperscript{*},
+Thomas Leo Scherer\textsuperscript{\getAff{University of California, San
+Diego}},
+Erik Gartzke\textsuperscript{\getAff{University of California, San
+Diego}}\\
 \bigskip
-\textbf{\getAff{University of California San Diego}}University of California, San Diego, La Jolla,CA, 92093\\
+\textbf{\getAff{University of California San Diego}}University of
+California, San Diego, La Jolla,CA, 92093\\
 \bigskip
 * Corresponding author: rexdouglass@gmail.com\\
 \end{flushleft}
@@ -219,7 +230,12 @@ Erik Gartzke\textsuperscript{\getAff{University of California, San Diego}}\\
 \linenumbers
 
 % Use "Eq" instead of "Equation" for equation citations.
-\(\text{\ul{Abstract: "One of the main ways we try to understand the pandemic is through time series cross section counts of cases and deaths. Observational studies with this kind of data have concrete and well known methodological issues that are mostly being ignored by a lot of work and news reporting right now. We enumerate some of those issues in areas of measurement, inference, and interpretation."}}\)
+Abstract: ``One of the main ways we try to understand the pandemic is
+through time series cross section counts of cases and deaths.
+Observational studies with this kind of data have concrete and well
+known methodological issues that are mostly being ignored by a lot of
+work and news reporting right now. We enumerate some of those issues in
+areas of measurement, inference, and interpretation.''
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
@@ -474,11 +490,11 @@ Review \& Editing, R.W.D. and T.L.S.; Funding - E.G.
 \addcontentsline{toc}{section}{References}
 
 \hypertarget{refs}{}
+\begin{cslreferences}
 \leavevmode\hypertarget{ref-alamoCovid19OpenDataResources2020}{}%
 Alamo, Teodoro, Daniel G. Reina, Martina Mammarella, and Alberto Abella.
 2020. ``Covid-19: Open-Data Resources for Monitoring, Modeling, and
-Forecasting the Epidemic.'' \emph{Electronics} 9 (5). Multidisciplinary
-Digital Publishing Institute: 827.
+Forecasting the Epidemic.'' \emph{Electronics} 9 (5): 827.
 \url{https://doi.org/10.3390/electronics9050827}.
 
 \leavevmode\hypertarget{ref-brauerMathematicalModelsPopulation2012}{}%
@@ -488,14 +504,12 @@ Models in Population Biology and Epidemiology}. Vol. 2. Springer.
 \leavevmode\hypertarget{ref-chengCOVID19GovernmentResponse2020a}{}%
 Cheng, Cindy, Joan Barceló, Allison Spencer Hartnett, Robert Kubinec,
 and Luca Messerschmidt. 2020. ``COVID-19 Government Response Event
-Dataset (CoronaNet V.1.0).'' \emph{Nature Human Behaviour} 4 (7). Nature
-Publishing Group: 756--68.
-\url{https://doi.org/10.1038/s41562-020-0909-7}.
+Dataset (CoronaNet V.1.0).'' \emph{Nature Human Behaviour} 4 (7):
+756--68. \url{https://doi.org/10.1038/s41562-020-0909-7}.
 
 \leavevmode\hypertarget{ref-covid19indiaorg2020tracker}{}%
 Group, COVID-19 India Org Data Operations. 2020. ``Dataset for Tracking
-COVID-19 Spread in India.'' Accessed on yyyy-mm-dd from
-https://api.covid19india.org/.
+COVID-19 Spread in India.''
 
 \leavevmode\hypertarget{ref-haleVariationGovernmentResponses2020}{}%
 Hale, Thomas, Anna Petherick, Toby Phillips, and Samuel Webster. 2020.
@@ -519,7 +533,7 @@ July. \url{http://arxiv.org/abs/2007.00756}.
 \leavevmode\hypertarget{ref-kubinecRetrospectiveBayesianModel2020}{}%
 Kubinec, Robert, and Luiz Carvalho. 2020. ``A Retrospective Bayesian
 Model for Measuring Covariate Effects on Observed COVID-19 Test and Case
-Counts,'' April. SocArXiv. \url{https://doi.org/10.31235/osf.io/jp4wk}.
+Counts,'' April. \url{https://doi.org/10.31235/osf.io/jp4wk}.
 
 \leavevmode\hypertarget{ref-zachliptonCovidTrackingProject2020}{}%
 Lipton, Zach, Josh Ellington, smike, James Ouyang, Ken Riley, Joshua
@@ -530,22 +544,21 @@ space-buzzer. 2020. ``The Covid-Tracking Project.'' Zenodo.
 \leavevmode\hypertarget{ref-meyerowitz-katzSystematicReviewMetaanalysis2020}{}%
 Meyerowitz-Katz, Gideon, and Lea Merone. 2020. ``A Systematic Review and
 Meta-Analysis of Published Research Data on COVID-19 Infection-Fatality
-Rates.'' \emph{medRxiv}, May. Cold Spring Harbor Laboratory Press,
-2020.05.03.20089854. \url{https://doi.org/10.1101/2020.05.03.20089854}.
+Rates.'' \emph{medRxiv}, May, 2020.05.03.20089854.
+\url{https://doi.org/10.1101/2020.05.03.20089854}.
 
 \leavevmode\hypertarget{ref-peelingSerologyTestingCOVID192020}{}%
 Peeling, Rosanna W., Catherine J. Wedderburn, Patricia J. Garcia, Debrah
 Boeras, Noah Fongwen, John Nkengasong, Amadou Sall, Amilcar Tanuri, and
 David L. Heymann. 2020. ``Serology Testing in the COVID-19 Pandemic
-Response.'' \emph{The Lancet Infectious Diseases} 0 (0). Elsevier.
+Response.'' \emph{The Lancet Infectious Diseases} 0 (0).
 \url{https://doi.org/10.1016/S1473-3099(20)30517-X}.
 
 \leavevmode\hypertarget{ref-pouwelsCommunityPrevalenceSARSCoV22020}{}%
 Pouwels, Koen B., Thomas House, Julie V. Robotham, Paul Birrell, Andrew
 B. Gelman, Nikola Bowers, Ian Boreham, et al. 2020. ``Community
 Prevalence of SARS-CoV-2 in England: Results from the ONS Coronavirus
-Infection Survey Pilot.'' \emph{medRxiv}, July. Cold Spring Harbor
-Laboratory Press, 2020.07.06.20147348.
+Infection Survey Pilot.'' \emph{medRxiv}, July, 2020.07.06.20147348.
 \url{https://doi.org/10.1101/2020.07.06.20147348}.
 
 \leavevmode\hypertarget{ref-nicholasgreichReichlabCovid19forecasthubPrepublication2020}{}%
@@ -600,13 +613,13 @@ Zhang, Chiqun, Chaitanya Donthini, and Microsoft Open Source. 2020.
 \url{https://doi.org/10.5281/zenodo.3978733}.
 
 \leavevmode\hypertarget{ref-jzohrabCOVIDAtlasLi2020}{}%
-Zohrab, J, Ryan Block, Cameron Chamberlain, Larry Davis, Minh
-Nguyeñ\^{}, Alastair Gifillan, Adam Hughes, BriceWolfgang, and
-andys1376. 2020. ``COVID Atlas Li.'' Zenodo.
+Zohrab, J, Ryan Block, Cameron Chamberlain, Larry Davis, Minh Nguyeñ̂,
+Alastair Gifillan, Adam Hughes, BriceWolfgang, and andys1376. 2020.
+``COVID Atlas Li.'' Zenodo.
 \url{https://doi.org/10.5281/zenodo.3981563}.
+\end{cslreferences}
 
 \nolinenumbers
 
 
 \end{document}
-
