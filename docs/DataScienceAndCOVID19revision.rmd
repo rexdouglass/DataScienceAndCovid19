@@ -14,11 +14,11 @@ author:
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   rticles::plos_article: default
-  pdf_document: 
-    keep_tex: yes
-  html_notebook: default
   html_document:
     df_print: paged
+  html_notebook: default
+  pdf_document: 
+    keep_tex: yes
 bibliography: cpas_covid_19.bib
 address:
 - address: University of California, San Diego, La Jolla,CA, 92093
@@ -42,8 +42,7 @@ header-includes:
 
 [2642/2500 words]
 -->
-
-Abstract: One of the main ways we try to understand the COVID-19 pandemic is through time series cross section counts of cases and deaths. Observational studies based on these kinds of data have concrete and well known methodological issues that suggest significant caution for both consumers and produces of COVID-19 knowledge. We briefly enumerate some of these issues in the areas of measurement, inference, and interpretation.
+\ul{Abstract: One of the main ways we try to understand the COVID-19 pandemic is through time series cross section counts of cases and deaths. Observational studies based on these kinds of data have concrete and well known methodological issues that suggest significant caution for both consumers and produces of COVID-19 knowledge. We briefly enumerate some of these issues in the areas of measurement, inference, and interpretation.}
 
 # Introduction
 
@@ -81,21 +80,21 @@ Even if we had an exogenous intervention, its treatment effect on the rate of sp
 
 One promising development is rigorous forecast evaluations [@nicholasgreichReichlabCovid19forecasthubPrepublication2020]. Notoriously, many early simple growth models fit to the takeoff period of infections performed well right up until the curve broke and then failed entirely. A parade of predicted peaks in cases since continue the tradition, with groups celebrating success on uninteresting short-term autocorrelations while ignoring failures on actually interesting shifts in trends. All we can do is develop a very long memory of predictions and constantly hold models accountable for their long run out-of-sample performance on unseen future data.
 
-Other trends in initial COVID-19 work and reporting are less promising. Especially concerning is observational work that presents correlations as evidence of causation. Without identification, correlations on short highly autocorrelated time series are as likely to be misleading as informative. The SEIR model expects a nonlinear and highly autocorrelated pattern of an increasing infection rate that then levels off independent of any interventions. An unscrupulous, or naive, analyst can easily find interventions that increased (or decreased) spread solely by where those interventions land in the natural disease cycle, completely independent of the intervention's actual effect. 
+\ul{Other trends in initial COVID-19 work and reporting are less promising. Especially concerning is observational work that} presents correlations as evidence of causation. Without identification, correlations on short highly autocorrelated time series are as likely to be misleading as informative. The SEIR model expects a nonlinear and highly autocorrelated pattern of an increasing infection rate that then levels off independent of any interventions. An unscrupulous, or naive, analyst can easily find interventions that increased (or decreased) spread solely by where those interventions land in the natural disease cycle, completely independent of the intervention's actual effect. 
 
-Another concern is the pursuit of statistically distinguishable correlations over actually attempting to explain variation in COVID-19 outcomes themselves. Papers that can show a particular political party or demographic group is 'worse' on some COVID-19 dimension receive much attention. Such results lack strong explanatory power or clear policy recommendations, and so while great for making headlines, they do little to help us end the current pandemic.
+Another \ul{concern} is the pursuit of statistically distinguishable correlations over actually attempting to explain variation in COVID-19 outcomes themselves. Papers that can show a particular political party or demographic group is 'worse' on some COVID-19 dimension receive much attention. Such results lack strong explanatory power or clear policy recommendations, and so while great for making headlines, they do little to help us end the current pandemic.
 
-Perhaps our greatest concern is the desire to setup straw man null hypotheses and then presenting the inability to reject them as positive evidence for medical and safety decisions, e.g. arguing that social distancing might not be required because a model was unable to statistically distinguish a large uptick in cases following a specific mass-meeting. In the best of circumstances, absence of evidence is not evidence of absence. Our underfit, undertheorized, and underperforming observational models are not the best of circumstances, and they are not sufficiently sensitive to evaluate more than macro-level general trends.
+\ul{Perhaps our greatest concern is the desire to} setup straw man null \ul{hypotheses} and then presenting the inability to reject them as positive evidence for medical and safety decisions, e.g. \ul{arguing that} social distancing might not be required because a model was unable to statistically distinguish a large uptick in cases following a \ul{specific} mass-meeting. In the best of circumstances, absence of evidence is not evidence of absence. Our underfit, undertheorized, and underperforming observational models are not the best of circumstances, and they are not sufficiently sensitive to evaluate more than macro-level general trends.
 
 # Conclusion
 
 This necessarily brief review omitted positive developments in studying COVID-19 outside of macro-observational settings. There has been remarkable progress in areas of diagnosis, clinical treatment, and phylogenetic tracking. Data science has contributed to the rapid collaboration, development, and dissemination of research in a way not seen in prior disease outbreaks. We also neglected topics like tracing, and the accompanying contributions from the tech field such as monitoring through mobile apps and social media.   Further, our review is overly U.S.-centric, with other countries like South Korea monitoring the disease so effectively they succeeded at containment without having to resort to difficult mitigation.
 
-Any policy prescription toward COVID-19 should be viewed with a healthy respect for how little we actually know about the history of this pandemic. Practioners working on these questions and with these data will be deeply familiar with many of these concerns, but some may be especially subtle or less prominantly discussed within one's main field of study. At a minimum, there is research being produced today which ignores many of these known methodological problems and subsequently generates confusion for novice consumers of analysis. We hope that this partial enumeration of challenges in COVID-19 measurement, inference, and interpretation is compelling justification for intellectual caution among consumers and producers of COVID-19 knowledge alike.
+\ul{Any policy prescription toward COVID-19 should be viewed with a} healthy respect for how little we actually know about the history of this pandemic. Practioners working on these questions and with these data will be deeply familiar with many of these concerns, but some may be especially subtle or less \ul{prominantly discussed} within one's main field of study. At a minimum, there is research being produced today which ignores \ul{many} of these known methodological problems and subsequently generates confusion for novice consumers of analysis. We hope \ul{that this partial} enumeration of challenges in COVID-19 measurement, inference, and interpretation is compelling \ul{justification for intellectual caution among consumers and producers of COVID-19 knowledge alike.
 
 # Acknowledgments
 
-Our thanks to the [Center for Peace and Security Studies](www.ucsd.cpass.edu) and its members, and to the Office of Naval Research [N00014-19-1-2491] and the Charles Koch Foundation for financial support. Thank you to all who provided feedback on the early draft. 
+Our thanks \ul{to} the [Center for Peace and Security Studies](www.ucsd.cpass.edu) and its members, and to the Office of Naval Research [N00014-19-1-2491] and the Charles Koch Foundation for financial support. Thank you to all who provided feedback on the early draft. 
 
 Author contributions: Conceptualization, R.W.D., T.L.S., and E.G.; Investigation, R.W.D.; Writing - Original Draft, R.W.D.; Writing - Review & Editing, R.W.D. and T.L.S.; Funding - E.G.
 

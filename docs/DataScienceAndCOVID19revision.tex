@@ -170,12 +170,6 @@
 \newcommand{\ipsum}{{\bf IPSUM}}
 
 
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newenvironment{cslreferences}%
-  {\setlength{\parindent}{0pt}%
-  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
-  {\par}
 
 \usepackage{soul}
 
@@ -202,22 +196,17 @@
 % Title must be 250 characters or less.
 \begin{flushleft}
 {\Large
-\textbf\newline{The Data Science of COVID-19 Spread: Some Troubling
-Current and Future
+\textbf\newline{The Data Science of COVID-19 Spread: Some Troubling Current and Future
 Trends} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
 }
 \newline
 % Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
 \\
-Rex Douglass\textsuperscript{\getAff{University of California, San
-Diego}}\textsuperscript{*},
-Thomas Leo Scherer\textsuperscript{\getAff{University of California, San
-Diego}},
-Erik Gartzke\textsuperscript{\getAff{University of California, San
-Diego}}\\
+Rex Douglass\textsuperscript{\getAff{University of California, San Diego}}\textsuperscript{*},
+Thomas Leo Scherer\textsuperscript{\getAff{University of California, San Diego}},
+Erik Gartzke\textsuperscript{\getAff{University of California, San Diego}}\\
 \bigskip
-\textbf{\getAff{University of California San Diego}}University of
-California, San Diego, La Jolla,CA, 92093\\
+\textbf{\getAff{University of California San Diego}}University of California, San Diego, La Jolla,CA, 92093\\
 \bigskip
 * Corresponding author: rexdouglass@gmail.com\\
 \end{flushleft}
@@ -230,12 +219,7 @@ California, San Diego, La Jolla,CA, 92093\\
 \linenumbers
 
 % Use "Eq" instead of "Equation" for equation citations.
-Abstract: ``One of the main ways we try to understand the pandemic is
-through time series cross section counts of cases and deaths.
-Observational studies with this kind of data have concrete and well
-known methodological issues that are mostly being ignored by a lot of
-work and news reporting right now. We enumerate some of those issues in
-areas of measurement, inference, and interpretation.''
+\ul{Abstract: One of the main ways we try to understand the COVID-19 pandemic is through time series cross section counts of cases and deaths. Observational studies based on these kinds of data have concrete and well known methodological issues that suggest significant caution for both consumers and produces of COVID-19 knowledge. We briefly enumerate some of these issues in the areas of measurement, inference, and interpretation.}
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
@@ -413,37 +397,34 @@ interesting shifts in trends. All we can do is develop a very long
 memory of predictions and constantly hold models accountable for their
 long run out-of-sample performance on unseen future data.
 
-\(\text{\underline{Other trends in initial COVID-19 work and reporting are concerning. Especially concerning is observational work}}\)
-that presents correlations as evidence of causation. Without
-identification, correlations on short highly autocorrelated time series
-are as likely to be misleading as informative. The SEIR model expects a
-nonlinear and highly autocorrelated pattern of an increasing infection
-rate that then levels off independent of any interventions. An
-unscrupulous, or naive, analyst can easily find interventions that
-increased (or decreased) spread solely by where those interventions land
-in the natural disease cycle, completely independent of the
-intervention's actual effect.
+\ul{Other trends in initial COVID-19 work and reporting are less promising. Especially concerning is observational work that}
+presents correlations as evidence of causation. Without identification,
+correlations on short highly autocorrelated time series are as likely to
+be misleading as informative. The SEIR model expects a nonlinear and
+highly autocorrelated pattern of an increasing infection rate that then
+levels off independent of any interventions. An unscrupulous, or naive,
+analyst can easily find interventions that increased (or decreased)
+spread solely by where those interventions land in the natural disease
+cycle, completely independent of the intervention's actual effect.
 
-Another \(\text{\underline{concern}}\) is the pursuit of statistically
-distinguishable correlations over actually attempting to explain
-variation in COVID-19 outcomes themselves. Papers that can show a
-particular political party or demographic group is `worse' on some
-COVID-19 dimension receive much attention. Such results lack strong
-explanatory power or clear policy recommendations, and so while great
-for making headlines, they do little to help us end the current
-pandemic.
+Another \ul{concern} is the pursuit of statistically distinguishable
+correlations over actually attempting to explain variation in COVID-19
+outcomes themselves. Papers that can show a particular political party
+or demographic group is `worse' on some COVID-19 dimension receive much
+attention. Such results lack strong explanatory power or clear policy
+recommendations, and so while great for making headlines, they do little
+to help us end the current pandemic.
 
-Perhaps
-\(\text{\underline{our greatest concern is the desire to setup}}\) straw
-man null \(\text{\underline{hypotheses}}\) and then presenting the
-inability to reject them as positive evidence for medical and safety
-decisions, e.g.~social distancing might not be required because a model
-was unable to statistically distinguish a large uptick in cases
-following a mass-meeting. In the best of circumstances, absence of
-evidence is not evidence of absence. Our underfit, undertheorized, and
-underperforming observational models are not the best of circumstances,
-and they are not sufficiently sensitive to evaluate more than
-macro-level general trends.
+\ul{Perhaps our greatest concern is the desire to} setup straw man null
+\ul{hypotheses} and then presenting the inability to reject them as
+positive evidence for medical and safety decisions, e.g.
+\ul{arguing that} social distancing might not be required because a
+model was unable to statistically distinguish a large uptick in cases
+following a \ul{specific} mass-meeting. In the best of circumstances,
+absence of evidence is not evidence of absence. Our underfit,
+undertheorized, and underperforming observational models are not the
+best of circumstances, and they are not sufficiently sensitive to
+evaluate more than macro-level general trends.
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
@@ -460,26 +441,26 @@ overly U.S.-centric, with other countries like South Korea monitoring
 the disease so effectively they succeeded at containment without having
 to resort to difficult mitigation.
 
-Any research related to COVID-19 requires healthy caution of and respect
-for how little we actually know about the history of this pandemic.
-Practioners working on these questions and with these data will be
-deeply familiar with many of these concerns, but some may be especially
-subtle or less prominant within one's main field of study. At a minimum,
-there is research being produced today which
-\(\text{\underline{may miss many}}\) of these known methodological
-problems and subsequently generates confusion for novice consumers of
-analysis.
-
-\(\text{\underline{We recommend that for both consumers and producers of COVID-19 knowledge develop a strong understanding of challenges in its measurement, inference, and interpretation. We hope this brief enumeration of those challenges can help show readers the path to such an understanding.}}\)
+\ul{Any policy prescription toward COVID-19 should be viewed with a}
+healthy respect for how little we actually know about the history of
+this pandemic. Practioners working on these questions and with these
+data will be deeply familiar with many of these concerns, but some may
+be especially subtle or less \ul{prominantly discussed} within one's
+main field of study. At a minimum, there is research being produced
+today which ignores \ul{many} of these known methodological problems and
+subsequently generates confusion for novice consumers of analysis. We
+hope \ul{that this partial} enumeration of challenges in COVID-19
+measurement, inference, and interpretation is compelling
+\textbackslash{}ul\{justification for intellectual caution among
+consumers and producers of COVID-19 knowledge alike.
 
 \hypertarget{acknowledgments}{%
 \section{Acknowledgments}\label{acknowledgments}}
 
-Our thanks \(\text{\underline{to}}\) the
-\href{www.ucsd.cpass.edu}{Center for Peace and Security Studies} and its
-members, and to the Office of Naval Research {[}N00014-19-1-2491{]} and
-the Charles Koch Foundation for financial support. Thank you to all who
-provided feedback on the early draft.
+Our thanks \ul{to} the \href{www.ucsd.cpass.edu}{Center for Peace and
+Security Studies} and its members, and to the Office of Naval Research
+{[}N00014-19-1-2491{]} and the Charles Koch Foundation for financial
+support. Thank you to all who provided feedback on the early draft.
 
 Author contributions: Conceptualization, R.W.D., T.L.S., and E.G.;
 Investigation, R.W.D.; Writing - Original Draft, R.W.D.; Writing -
@@ -490,11 +471,11 @@ Review \& Editing, R.W.D. and T.L.S.; Funding - E.G.
 \addcontentsline{toc}{section}{References}
 
 \hypertarget{refs}{}
-\begin{cslreferences}
 \leavevmode\hypertarget{ref-alamoCovid19OpenDataResources2020}{}%
 Alamo, Teodoro, Daniel G. Reina, Martina Mammarella, and Alberto Abella.
 2020. ``Covid-19: Open-Data Resources for Monitoring, Modeling, and
-Forecasting the Epidemic.'' \emph{Electronics} 9 (5): 827.
+Forecasting the Epidemic.'' \emph{Electronics} 9 (5). Multidisciplinary
+Digital Publishing Institute: 827.
 \url{https://doi.org/10.3390/electronics9050827}.
 
 \leavevmode\hypertarget{ref-brauerMathematicalModelsPopulation2012}{}%
@@ -504,12 +485,14 @@ Models in Population Biology and Epidemiology}. Vol. 2. Springer.
 \leavevmode\hypertarget{ref-chengCOVID19GovernmentResponse2020a}{}%
 Cheng, Cindy, Joan Barceló, Allison Spencer Hartnett, Robert Kubinec,
 and Luca Messerschmidt. 2020. ``COVID-19 Government Response Event
-Dataset (CoronaNet V.1.0).'' \emph{Nature Human Behaviour} 4 (7):
-756--68. \url{https://doi.org/10.1038/s41562-020-0909-7}.
+Dataset (CoronaNet V.1.0).'' \emph{Nature Human Behaviour} 4 (7). Nature
+Publishing Group: 756--68.
+\url{https://doi.org/10.1038/s41562-020-0909-7}.
 
 \leavevmode\hypertarget{ref-covid19indiaorg2020tracker}{}%
 Group, COVID-19 India Org Data Operations. 2020. ``Dataset for Tracking
-COVID-19 Spread in India.''
+COVID-19 Spread in India.'' Accessed on yyyy-mm-dd from
+https://api.covid19india.org/.
 
 \leavevmode\hypertarget{ref-haleVariationGovernmentResponses2020}{}%
 Hale, Thomas, Anna Petherick, Toby Phillips, and Samuel Webster. 2020.
@@ -533,7 +516,7 @@ July. \url{http://arxiv.org/abs/2007.00756}.
 \leavevmode\hypertarget{ref-kubinecRetrospectiveBayesianModel2020}{}%
 Kubinec, Robert, and Luiz Carvalho. 2020. ``A Retrospective Bayesian
 Model for Measuring Covariate Effects on Observed COVID-19 Test and Case
-Counts,'' April. \url{https://doi.org/10.31235/osf.io/jp4wk}.
+Counts,'' April. SocArXiv. \url{https://doi.org/10.31235/osf.io/jp4wk}.
 
 \leavevmode\hypertarget{ref-zachliptonCovidTrackingProject2020}{}%
 Lipton, Zach, Josh Ellington, smike, James Ouyang, Ken Riley, Joshua
@@ -544,21 +527,22 @@ space-buzzer. 2020. ``The Covid-Tracking Project.'' Zenodo.
 \leavevmode\hypertarget{ref-meyerowitz-katzSystematicReviewMetaanalysis2020}{}%
 Meyerowitz-Katz, Gideon, and Lea Merone. 2020. ``A Systematic Review and
 Meta-Analysis of Published Research Data on COVID-19 Infection-Fatality
-Rates.'' \emph{medRxiv}, May, 2020.05.03.20089854.
-\url{https://doi.org/10.1101/2020.05.03.20089854}.
+Rates.'' \emph{medRxiv}, May. Cold Spring Harbor Laboratory Press,
+2020.05.03.20089854. \url{https://doi.org/10.1101/2020.05.03.20089854}.
 
 \leavevmode\hypertarget{ref-peelingSerologyTestingCOVID192020}{}%
 Peeling, Rosanna W., Catherine J. Wedderburn, Patricia J. Garcia, Debrah
 Boeras, Noah Fongwen, John Nkengasong, Amadou Sall, Amilcar Tanuri, and
 David L. Heymann. 2020. ``Serology Testing in the COVID-19 Pandemic
-Response.'' \emph{The Lancet Infectious Diseases} 0 (0).
+Response.'' \emph{The Lancet Infectious Diseases} 0 (0). Elsevier.
 \url{https://doi.org/10.1016/S1473-3099(20)30517-X}.
 
 \leavevmode\hypertarget{ref-pouwelsCommunityPrevalenceSARSCoV22020}{}%
 Pouwels, Koen B., Thomas House, Julie V. Robotham, Paul Birrell, Andrew
 B. Gelman, Nikola Bowers, Ian Boreham, et al. 2020. ``Community
 Prevalence of SARS-CoV-2 in England: Results from the ONS Coronavirus
-Infection Survey Pilot.'' \emph{medRxiv}, July, 2020.07.06.20147348.
+Infection Survey Pilot.'' \emph{medRxiv}, July. Cold Spring Harbor
+Laboratory Press, 2020.07.06.20147348.
 \url{https://doi.org/10.1101/2020.07.06.20147348}.
 
 \leavevmode\hypertarget{ref-nicholasgreichReichlabCovid19forecasthubPrepublication2020}{}%
@@ -613,13 +597,13 @@ Zhang, Chiqun, Chaitanya Donthini, and Microsoft Open Source. 2020.
 \url{https://doi.org/10.5281/zenodo.3978733}.
 
 \leavevmode\hypertarget{ref-jzohrabCOVIDAtlasLi2020}{}%
-Zohrab, J, Ryan Block, Cameron Chamberlain, Larry Davis, Minh Nguyeñ̂,
-Alastair Gifillan, Adam Hughes, BriceWolfgang, and andys1376. 2020.
-``COVID Atlas Li.'' Zenodo.
+Zohrab, J, Ryan Block, Cameron Chamberlain, Larry Davis, Minh
+Nguyeñ\^{}, Alastair Gifillan, Adam Hughes, BriceWolfgang, and
+andys1376. 2020. ``COVID Atlas Li.'' Zenodo.
 \url{https://doi.org/10.5281/zenodo.3981563}.
-\end{cslreferences}
 
 \nolinenumbers
 
 
 \end{document}
+
